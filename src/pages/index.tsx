@@ -17,8 +17,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Link href={"/characters/1"}>Arisu</Link>
-        <Link href={"/characters/2"}>Usagi</Link>
+        <Link className={styles.link} href={"/characters/1"}>Arisu</Link>
+        <Link className={styles.link} href={"/characters/2"}>Usagi</Link>
       </main>
     </>
   );
