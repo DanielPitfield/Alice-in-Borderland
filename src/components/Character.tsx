@@ -2,6 +2,7 @@ import styles from "../styles/Character.module.scss";
 
 import type { CharacterData } from "../pages/api/character/[characterID]";
 import CharacterFacts from "./CharacterFacts";
+import CharacterCardGames from "./CharacterCardGames";
 
 export interface CharacterProps {
   characterData: CharacterData | undefined;
@@ -15,14 +16,10 @@ const Character = (props: CharacterProps) => {
   return (
     <article className={styles.wrapper}>
       <CharacterFacts characterData={props.characterData} />
-      <div
-        className={styles.item}
-      >{`Game Speciality: ${props.characterData.gameSpeciality.join(
-        ", "
-      )}`}</div>
-      <div
-        className={styles.item}
-      >{`Games Played: ${props.characterData.gamesPlayed.join(", ")}`}</div>
+      <CharacterCardGames
+        gameSpeciality={props.characterData.gameSpeciality}
+        gamesPlayed={props.characterData.gamesPlayed}
+      />
     </article>
   );
 };
