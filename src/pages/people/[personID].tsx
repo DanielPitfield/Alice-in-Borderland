@@ -4,48 +4,48 @@ import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from "next";
-import Character from "../../components/Character";
+import Person from "../../components/Person";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
-    paths: [{ params: { characterID: "1" } }, { params: { characterID: "2" } }],
+    paths: [{ params: { personID: "1" } }, { params: { personID: "2" } }],
     fallback: "blocking",
   };
 };
 
 export async function getStaticProps(
-  context: GetStaticPropsContext<{ characterID: string }>
+  context: GetStaticPropsContext<{ personID: string }>
 ) {
   const ssg = createProxySSGHelpers({
     router: appRouter,
     ctx: {},
   });
 
-  const characterID = context.params?.characterID as string;
+  const personID = context.params?.personID as string;
 
-  await ssg.character.getInfo.prefetch({ characterID });
+  await ssg.people.getInfo.prefetch({ personID });
 
   return {
     props: {
       trpcState: ssg.dehydrate(),
-      characterID,
+      personID,
     },
     revalidate: 1,
   };
 }
 
-export default function CharacterPage(
+export default function PersonPage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
-  const { data: characterData } = api.character.getInfo.useQuery({
-    characterID: props.characterID,
+  const { data: person } = api.people.getInfo.useQuery({
+    personID: props.personID,
   });
 
-  if (!characterData) {
+  if (!person) {
     return null;
   }
 
-  return <Character characterData={characterData} />;
+  return <Person person={person} />;
 }

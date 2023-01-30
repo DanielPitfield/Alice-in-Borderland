@@ -1,8 +1,8 @@
 import { createTRPCRouter } from "./trpc";
-import { characterRouter } from "./routers/character";
+import { peopleRouter } from "./routers/people";
 
 export const appRouter = createTRPCRouter({
-  character: characterRouter,
+  people: peopleRouter,
 });
 
 // export type definition of API

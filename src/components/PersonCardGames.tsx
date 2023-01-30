@@ -1,12 +1,12 @@
 import type { CardName, CardRank, CardSuite } from "../data/Cards/cardMappings";
 import Card from "./Card";
 
-interface CharacterCardGamesProps {
+interface PersonCardGamesProps {
   gameSpeciality: CardSuite[];
   gamesPlayed: CardName<CardRank, CardSuite>[];
 }
 
-const CharacterCardGames = (props: CharacterCardGamesProps) => {
+const PersonCardGames = (props: PersonCardGamesProps) => {
   return (
     <>
       <h3>{`Game Speciality: ${props.gameSpeciality.join(", ")}`}</h3>
@@ -17,4 +17,4 @@ const CharacterCardGames = (props: CharacterCardGamesProps) => {
   );
 };
 
-export default CharacterCardGames;
+export default PersonCardGames;
