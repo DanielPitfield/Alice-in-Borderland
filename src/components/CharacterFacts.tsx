@@ -12,7 +12,6 @@ const CharacterFacts = (props: CharacterFactsProps) => {
   }
 
   const items: string[] = [
-    `Name: ${props.characterData.name} (${props.characterData.japaneseName})`,
     `Gender: ${props.characterData.gender}`,
     `Occupation: ${props.characterData.occupation.join(", ")}`,
     `Citizenship: ${

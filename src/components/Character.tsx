@@ -15,6 +15,7 @@ const Character = (props: CharacterProps) => {
 
   return (
     <article className={styles.wrapper}>
+      <h1>{`${props.characterData.name} (${props.characterData.japaneseName})`}</h1>
       <CharacterFacts characterData={props.characterData} />
       <CharacterCardGames
         gameSpeciality={props.characterData.gameSpeciality}

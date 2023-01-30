@@ -10,9 +10,7 @@ interface CharacterCardGamesProps {
 const CharacterCardGames = (props: CharacterCardGamesProps) => {
   return (
     <>
-      <h3
-        className={styles.item}
-      >{`Game Speciality: ${props.gameSpeciality.join(", ")}`}</h3>
+      <h3>{`Game Speciality: ${props.gameSpeciality.join(", ")}`}</h3>
 
       <ul className={styles.facts}>
         {props.gamesPlayed.map((game) => (
