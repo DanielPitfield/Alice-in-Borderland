@@ -1,6 +1,5 @@
-import styles from "../styles/Character.module.scss";
-
 import type { CardName, CardRank, CardSuite } from "../data/Cards/cardMappings";
+import Card from "./Card";
 
 interface CharacterCardGamesProps {
   gameSpeciality: CardSuite[];
@@ -11,14 +10,9 @@ const CharacterCardGames = (props: CharacterCardGamesProps) => {
   return (
     <>
       <h3>{`Game Speciality: ${props.gameSpeciality.join(", ")}`}</h3>
-
-      <ul className={styles.facts}>
-        {props.gamesPlayed.map((game) => (
-          <li key={game} className={styles.item}>
-            {game}
-          </li>
-        ))}
-      </ul>
+      {props.gamesPlayed.map((game) => (
+        <Card key={game} card={game} />
+      ))}
     </>
   );
 };
