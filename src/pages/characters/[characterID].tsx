@@ -8,7 +8,7 @@ import Character from "../../components/Character";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: [{ params: { characterID: "1" } }, { params: { characterID: "2" } }],
     fallback: "blocking",
@@ -18,7 +18,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export async function getStaticProps(
   context: GetStaticPropsContext<{ characterID: string }>
 ) {
-  const ssg = await createProxySSGHelpers({
+  const ssg = createProxySSGHelpers({
     router: appRouter,
     ctx: {},
   });
