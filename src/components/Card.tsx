@@ -7,16 +7,16 @@ export interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  const iconPath: IconType | undefined = cardMappings.find(
+  const IconPath: IconType | undefined = cardMappings.find(
     (x) => x.card === props.card
   )?.icon;
 
   // If the card image couldn't be found, just show the name of the card
-  if (!iconPath) {
+  if (!IconPath) {
     return <div>{props.card}</div>;
   }
 
-  return <iconPath />;
+  return <IconPath />;
 };
 
 export default Card;
