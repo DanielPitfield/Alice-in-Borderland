@@ -1,8 +1,9 @@
 import styles from "../styles/index.module.scss";
+import { api } from "../utils/api";
+
 import { type NextPage } from "next";
 import Head from "next/head";
-
-import { api } from "../utils/api";
+import Character from "../components/Character";
 
 const Home: NextPage = () => {
   const { data: usagi } = api.character.getInfo.useQuery({ characterID: "2" });
@@ -20,9 +21,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.container}>
-          <p className={styles.showcaseText}>
-            {JSON.stringify(usagi, undefined, 4) ?? "Loading..."}
-          </p>
+          <Character characterData={usagi} />
         </div>
       </main>
     </>
