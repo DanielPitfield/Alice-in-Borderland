@@ -18,7 +18,7 @@ export default function handler(
   res: NextApiResponse<CharacterData | { message: string }>
 ) {
   const character: CharacterData | undefined = characters.find(
-    (character) => character.id === req.query.id
+    (character) => character.id === (req.query.characterID as string)
   );
 
   if (character) {
@@ -27,5 +27,5 @@ export default function handler(
 
   return res
     .status(404)
-    .json({ message: `User with id: ${req.query.id as string} not found.` });
+    .json({ message: `User with id: ${req.query.characterID as string} not found.` });
 }

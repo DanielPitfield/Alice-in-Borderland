@@ -5,7 +5,7 @@ import Head from "next/head";
 import { api } from "../utils/api";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const { data: usagi } = api.character.getInfo.useQuery({ characterID: "2" });
 
   return (
     <>
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.container}>
           <p className={styles.showcaseText}>
-            {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+            {JSON.stringify(usagi, undefined, 4) ?? "Loading..."}
           </p>
         </div>
       </main>
