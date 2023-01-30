@@ -1,9 +1,9 @@
-import type { CardName, CardRank, CardSuite } from "../data/Cards/cardMappings";
+import type { CardName, CardSuite } from "../data/Cards/cardMappings";
 import Card from "./Card";
 
 interface PersonCardGamesProps {
   gameSpeciality: CardSuite[];
-  gamesPlayed: CardName<CardRank, CardSuite>[];
+  gamesPlayed: CardName[];
 }
 
 const PersonCardGames = (props: PersonCardGamesProps) => {

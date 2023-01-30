@@ -1,9 +1,9 @@
-import { cardMappings } from "../data/Cards/cardMappings";
-import type { CardName, CardRank, CardSuite } from "../data/Cards/cardMappings";
 import type { IconType } from "react-icons/lib";
+import type { CardName } from "../data/Cards/cardMappings";
+import { cardMappings } from "../data/Cards/cardMappings";
 
 export interface CardProps {
-  card: CardName<CardRank, CardSuite>;
+  card: CardName;
 }
 
 const Card = (props: CardProps) => {

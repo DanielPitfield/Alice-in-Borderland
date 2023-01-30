@@ -1,4 +1,4 @@
-import type { CardName, CardRank, CardSuite } from "./cardMappings";
+import type { CardName } from "./cardMappings";
 import type { IconType } from "react-icons/lib";
 
 import { GiCard2Clubs } from "react-icons/gi";
@@ -15,7 +15,7 @@ import { GiCardQueenClubs } from "react-icons/gi";
 import { GiCardKingClubs } from "react-icons/gi";
 
 export const clubsCardMappings: {
-  card: CardName<CardRank, CardSuite>;
+  card: CardName;
   icon: IconType;
 }[] = [
   { card: "2 of Clubs", icon: GiCard2Clubs },

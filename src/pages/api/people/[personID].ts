@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type {
   CardName,
-  CardRank,
   CardSuite,
 } from "../../../data/Cards/cardMappings";
 import { people } from "../../../data/people";
@@ -14,7 +13,7 @@ export type PersonData = {
   occupation: string[];
   borderlandCitizenship: "Player" | "Dealer" | "Citizen";
   gameSpeciality: CardSuite[];
-  gamesPlayed: CardName<CardRank, CardSuite>[];
+  gamesPlayed: CardName[];
 };
 
 export default function handler(

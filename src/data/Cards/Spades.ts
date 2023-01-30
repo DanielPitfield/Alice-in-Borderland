@@ -1,4 +1,4 @@
-import type { CardName, CardRank, CardSuite } from "./cardMappings";
+import type { CardName } from "./cardMappings";
 import type { IconType } from "react-icons/lib";
 
 import { GiCard2Spades } from "react-icons/gi";
@@ -15,7 +15,7 @@ import { GiCardQueenSpades } from "react-icons/gi";
 import { GiCardKingSpades } from "react-icons/gi";
 
 export const spadesCardMappings: {
-  card: CardName<CardRank, CardSuite>;
+  card: CardName;
   icon: IconType;
 }[] = [
   { card: "2 of Spades", icon: GiCard2Spades },

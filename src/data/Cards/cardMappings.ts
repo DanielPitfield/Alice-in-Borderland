@@ -19,10 +19,12 @@ export type CardRank =
 
 export type CardSuite = "Clubs" | "Diamonds" | "Hearts" | "Spades";
 
-export type CardName<
+type CardNameInner<
   CardRank extends string,
   CardSuite extends string
 > = `${CardRank} of ${CardSuite}`;
+
+export type CardName = CardNameInner<CardRank, CardSuite>
 
 export const cardMappings = clubsCardMappings.concat(
   diamondsCardMappings,
