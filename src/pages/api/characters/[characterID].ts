@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { CardName, CardRank, CardSuite } from "../../../data/cards";
+import type {
+  CardName,
+  CardRank,
+  CardSuite,
+} from "../../../data/Cards/cardMappings";
 import { characters } from "../../../data/characters";
 
 export type CharacterData = {
@@ -25,7 +29,7 @@ export default function handler(
     return res.status(200).json(character);
   }
 
-  return res
-    .status(404)
-    .json({ message: `User with id: ${req.query.characterID as string} not found.` });
+  return res.status(404).json({
+    message: `User with id: ${req.query.characterID as string} not found.`,
+  });
 }

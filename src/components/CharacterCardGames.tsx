@@ -1,6 +1,6 @@
 import styles from "../styles/Character.module.scss";
 
-import type { CardName, CardRank, CardSuite } from "../data/cards";
+import type { CardName, CardRank, CardSuite } from "../data/Cards/cardMappings";
 
 interface CharacterCardGamesProps {
   gameSpeciality: CardSuite[];
