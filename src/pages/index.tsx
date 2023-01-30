@@ -1,13 +1,10 @@
 import styles from "../styles/index.module.scss";
-import { api } from "../utils/api";
 
 import { type NextPage } from "next";
 import Head from "next/head";
-import Character from "../components/Character";
+import Link from "next/link";
 
 const Home: NextPage = () => {
-  const { data: usagi } = api.character.getInfo.useQuery({ characterID: "2" });
-
   return (
     <>
       <Head>
@@ -20,9 +17,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.container}>
-          <Character characterData={usagi} />
-        </div>
+        <Link href={"/characters/1"}>Arisu</Link>
+        <Link href={"/characters/2"}>Usagi</Link>
       </main>
     </>
   );

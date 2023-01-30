@@ -1,16 +1,12 @@
 import styles from "../styles/Character.module.scss";
 
-import type { CharacterData } from "../pages/api/character/[characterID]";
+import type { CharacterData } from "../pages/api/characters/[characterID]";
 
 interface CharacterFactsProps {
-  characterData: CharacterData | undefined;
+  characterData: CharacterData;
 }
 
 const CharacterFacts = (props: CharacterFactsProps) => {
-  if (!props.characterData) {
-    return null;
-  }
-
   const items: string[] = [
     `Gender: ${props.characterData.gender}`,
     `Occupation: ${props.characterData.occupation.join(", ")}`,

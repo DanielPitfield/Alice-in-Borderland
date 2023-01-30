@@ -1,4 +1,4 @@
-import type { CharacterData } from "../pages/api/character/[characterID]";
+import type { CharacterData } from "../pages/api/characters/[characterID]";
 
 export const characters: CharacterData[] = [
   {

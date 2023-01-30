@@ -1,18 +1,14 @@
 import styles from "../styles/Character.module.scss";
 
-import type { CharacterData } from "../pages/api/character/[characterID]";
+import type { CharacterData } from "../pages/api/characters/[characterID]";
 import CharacterFacts from "./CharacterFacts";
 import CharacterCardGames from "./CharacterCardGames";
 
 export interface CharacterProps {
-  characterData: CharacterData | undefined;
+  characterData: CharacterData;
 }
 
 const Character = (props: CharacterProps) => {
-  if (!props.characterData) {
-    return null;
-  }
-
   return (
     <article className={styles.wrapper}>
       <h1>{`${props.characterData.name} (${props.characterData.japaneseName})`}</h1>
