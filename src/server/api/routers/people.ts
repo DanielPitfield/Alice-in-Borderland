@@ -9,6 +9,7 @@ export const peopleRouter = createTRPCRouter({
     .query(async ({ input }): Promise<PersonData> => {
       const API_URL = `http://localhost:3000/api/people/${input.personID}`;
       const response = await fetch(API_URL);
-      return await response.json();
+      const data = await response.json() as PersonData;
+      return data;
     }),
 });
