@@ -34,10 +34,10 @@ type CardNameInner<
 export type CardName = CardNameInner<CardRank, CardSuite>;
 
 export const cardSuiteMappings: { suite: CardSuite; icon: IconType }[] = [
-  { suite: "Clubs", icon: BsSuitSpadeFill },
+  { suite: "Clubs", icon: BsSuitClubFill },
   { suite: "Diamonds", icon: BsSuitDiamondFill },
   { suite: "Hearts", icon: BsSuitHeartFill },
-  { suite: "Clubs", icon: BsSuitClubFill },
+  { suite: "Spades", icon: BsSuitSpadeFill },
 ];
 
 export const cardMappings = clubsCardMappings.concat(

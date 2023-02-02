@@ -1,16 +1,15 @@
 import styles from "../styles/Card.module.scss";
 
 import type { IconType } from "react-icons/lib";
-import { type CardSuite, cardSuiteMappings } from "../data/Cards/cardMappings";
+import type { CardSuite } from "../data/Cards/cardMappings";
+import { cardSuiteMappings } from "../data/Cards/cardMappings";
 
 export interface SuiteProps {
   suite: CardSuite;
 }
 
 const Suite = (props: SuiteProps) => {
-  const IconPath: IconType | undefined = cardSuiteMappings.find(
-    (x) => x.suite === props.suite
-  )?.icon;
+  const IconPath: IconType | undefined = cardSuiteMappings.find((x) => x.suite === props.suite)?.icon;
 
   debugger;
 
