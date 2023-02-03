@@ -24,7 +24,7 @@ const Card = (props: CardProps) => {
   }
 
   // Add a link if there is data for the game/card
-  return isLinkShown ? <Link href={`/games/${props.card}`}>{renderContent()}</Link> : renderContent();
+  return isLinkShown ? <Link href={`/games/${props.card}`}>{renderContent()}</Link> : <>{renderContent()}</>;
 };
 
 export default Card;
