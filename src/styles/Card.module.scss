@@ -1,14 +1,14 @@
 .cardWrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 1em;
+  justify-content: center;
   margin: 0.5em 2em;
 
   .text {
     display: flex;
     color: inherit;
 
-     &[data-disabled="true"] {
+    &[data-disabled="true"] {
       opacity: 60%;
       cursor: not-allowed;
     }

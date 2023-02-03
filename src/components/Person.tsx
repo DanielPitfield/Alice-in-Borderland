@@ -11,7 +11,7 @@ export interface PersonProps {
 const Person = (props: PersonProps) => {
   return (
     <article className={styles.wrapper}>
-      <h1>{`${props.person.name} (${props.person.japaneseName})`}</h1>
+      <h1 className={styles.title}>{`${props.person.name} (${props.person.japaneseName})`}</h1>
       <PersonFacts person={props.person} />
       <PersonCardGames
         gameSpeciality={props.person.gameSpeciality}
