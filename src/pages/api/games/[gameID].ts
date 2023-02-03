@@ -10,12 +10,9 @@ export type GameData = {
   description: string;
 };
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<GameData | { message: string }>
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<GameData | { message: string }>) {
   const game: GameData | undefined = games.find(
-    (game) => game.id === (req.query.gameID as string)
+    (game) => game.id === (req.query.gameID as string) || game.name === (req.query.gameID as string)
   );
 
   if (game) {

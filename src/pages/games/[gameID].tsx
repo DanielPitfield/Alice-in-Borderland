@@ -4,6 +4,7 @@ import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from "next";
+import Game from "../../components/Game";
 import { games } from "../../data/games";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
@@ -12,7 +13,7 @@ export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: games.map((game) => ({
       params: {
-        game: game.name,
+        gameID: game.name,
       },
     })),
     fallback: "blocking",
@@ -51,5 +52,5 @@ export default function GamePage(
     return null;
   }
 
-  //return <Game game={game} />;
+  return <Game game={game} />;
 }
