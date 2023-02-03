@@ -8,6 +8,9 @@ export interface PersonProps {
   person: PersonData;
 }
 
+// TODO: Image (on left side), then all information (on right side)
+// TODO: Maybe show game speciality next to title (would need to decouple from PersonCardGames)
+// TODO: Then information/facts/bio and list of cards/games played
 const Person = (props: PersonProps) => {
   return (
     <article className={styles.wrapper}>

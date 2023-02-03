@@ -4,6 +4,7 @@ import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } f
 import Card from "../../components/Card";
 import { type CardName, CardSuites, CardRanks, cardSuiteMappings } from "../../data/Cards/cardMappings";
 
+// TODO: Joker card?
 export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: CardSuites.map((suite) => ({

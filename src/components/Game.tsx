@@ -7,6 +7,7 @@ export interface GameProps {
   game: GameData;
 }
 
+// TODO: Show card (the component but without a link, maybe add hasLink prop?)
 const Game = (props: GameProps) => {
   return (
     <article className={styles.wrapper}>
