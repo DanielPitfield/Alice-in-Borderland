@@ -47,12 +47,7 @@ export const people: PersonData[] = [
     occupation: ["Apparels clerk"],
     borderlandCitizenship: "Player",
     gameSpeciality: ["Clubs", "Spades"],
-    gamesPlayed: [
-      "10 of Hearts",
-      "Jack of Spades",
-      "King of Spades",
-      "King of Clubs",
-    ],
+    gamesPlayed: ["10 of Hearts", "Jack of Spades", "King of Spades", "King of Clubs"],
   },
   {
     id: "4",
@@ -89,12 +84,7 @@ export const people: PersonData[] = [
     occupation: ["Game engineer"],
     borderlandCitizenship: "Player",
     gameSpeciality: ["Diamonds"],
-    gamesPlayed: [
-      "6 of Spades",
-      "10 of Hearts",
-      "King of Clubs",
-      "King of Spades",
-    ],
+    gamesPlayed: ["6 of Spades", "10 of Hearts", "King of Clubs", "King of Spades"],
   },
   {
     id: "7",
@@ -194,11 +184,8 @@ export const people: PersonData[] = [
     occupation: ["Metropolitan Police Forensic Scientist"],
     borderlandCitizenship: "Player",
     gameSpeciality: ["Diamonds"],
-    gamesPlayed: [
-      "4 of Diamonds",
-      "10 of Hearts",
-      "Queen of Diamonds",
-      "King of Spades",
-    ],
+    gamesPlayed: ["4 of Diamonds", "10 of Hearts", "Queen of Diamonds", "King of Spades"],
   },
 ];
+
+export type PersonName = typeof people[number]["name"];

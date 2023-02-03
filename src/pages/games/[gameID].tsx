@@ -4,49 +4,52 @@ import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from "next";
-import Person from "../../components/Person";
+import { games } from "../../data/games";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
-    // TODO: Map over PersonNames
-    paths: [{ params: { personID: "1" } }, { params: { personID: "2" } }],
+    paths: games.map((game) => ({
+      params: {
+        game: game.name,
+      },
+    })),
     fallback: "blocking",
   };
 };
 
 export async function getStaticProps(
-  context: GetStaticPropsContext<{ personID: string }>
+  context: GetStaticPropsContext<{ gameID: string }>
 ) {
   const ssg = createProxySSGHelpers({
     router: appRouter,
     ctx: {},
   });
 
-  const personID = context.params?.personID as string;
+  const gameID = context.params?.gameID as string;
 
-  await ssg.people.getInfo.prefetch({ personID });
+  await ssg.games.getInfo.prefetch({ gameID });
 
   return {
     props: {
       trpcState: ssg.dehydrate(),
-      personID,
+      gameID,
     },
     revalidate: 1,
   };
 }
 
-export default function PersonPage(
+export default function GamePage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
-  const { data: person } = api.people.getInfo.useQuery({
-    personID: props.personID,
+  const { data: game } = api.games.getInfo.useQuery({
+    gameID: props.gameID,
   });
 
-  if (!person) {
+  if (!game) {
     return null;
   }
 
-  return <Person person={person} />;
+  //return <Game game={game} />;
 }
