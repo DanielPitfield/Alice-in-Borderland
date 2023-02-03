@@ -6,17 +6,17 @@ import { type CardName, CardSuites } from "../../data/Cards/cardMappings";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
-    paths: [
-      { params: { suite: "Clubs" } },
-      { params: { suite: "Diamonds" } },
-      { params: { suite: "Hearts" } },
-      { params: { suite: "Spades" } },
-    ],
+    paths: CardSuites.map((suite) => ({
+      params: {
+        suite,
+      },
+    })),
     fallback: "blocking",
   };
 };
 
 export function getStaticProps(context: GetStaticPropsContext<{ suite: string }>) {
+  // TODO: Can the dynamic segment be typed as something other than string?
   const suite = context.params?.suite as string;
 
   return {
