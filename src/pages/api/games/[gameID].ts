@@ -1,8 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import type { CardName } from "../../../data/Cards/cardMappings";
 import { games } from "../../../data/games";
 
 export type GameData = {
   id: string;
+  name: CardName;
   status: "Cleared";
   players: string[];
   description: string;

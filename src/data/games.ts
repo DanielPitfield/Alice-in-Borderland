@@ -3,6 +3,7 @@ import type { GameData } from "../pages/api/games/[gameID]";
 export const games: GameData[] = [
   {
     id: "2H",
+    name: "2 of Hearts",
     status: "Cleared",
     players: ["Saori"],
     description:
