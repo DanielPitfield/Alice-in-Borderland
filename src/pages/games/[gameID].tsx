@@ -10,7 +10,7 @@ export const getStaticPaths: GetStaticPaths = () => {
     // TODO: Add static paths of IDs
     paths: games.map((game) => ({
       params: {
-        gameID: game.name,
+        gameID: game.cardName,
       },
     })),
     fallback: false,

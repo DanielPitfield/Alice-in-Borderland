@@ -13,7 +13,12 @@ export interface CardProps {
 
 const Card = (props: CardProps) => {
   const IconPath: IconType | undefined = cardMappings.find((x) => x.card === props.card)?.icon;
-  const isLinkShown: boolean = games.some((game) => game.id === props.card || game.name === props.card);
+  const isLinkShown: boolean = games.some(
+    (game) =>
+      game.id === props.card ||
+      game.cardName.toLowerCase() === props.card.toLowerCase() ||
+      game.name?.toLowerCase() === props.card.toLowerCase()
+  );
 
   function renderContent(): React.ReactNode {
     // If the card image couldn't be found, just show the name of the card
