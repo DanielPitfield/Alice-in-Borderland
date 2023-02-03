@@ -1,9 +1,5 @@
 import { createProxySSGHelpers } from "@trpc/react-query/ssg";
-import type {
-  GetStaticPaths,
-  GetStaticPropsContext,
-  InferGetStaticPropsType,
-} from "next";
+import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Person from "../../components/Person";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
@@ -12,13 +8,11 @@ export const getStaticPaths: GetStaticPaths = () => {
   return {
     // TODO: Map over PersonNames
     paths: [{ params: { personID: "1" } }, { params: { personID: "2" } }],
-    fallback: "blocking",
+    fallback: false,
   };
 };
 
-export async function getStaticProps(
-  context: GetStaticPropsContext<{ personID: string }>
-) {
+export async function getStaticProps(context: GetStaticPropsContext<{ personID: string }>) {
   const ssg = createProxySSGHelpers({
     router: appRouter,
     ctx: {},
@@ -37,9 +31,7 @@ export async function getStaticProps(
   };
 }
 
-export default function PersonPage(
-  props: InferGetStaticPropsType<typeof getStaticProps>
-) {
+export default function PersonPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
   const { data: person } = api.people.getInfo.useQuery({
     personID: props.personID,
   });

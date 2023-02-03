@@ -11,7 +11,7 @@ export const getStaticPaths: GetStaticPaths = () => {
         suite,
       },
     })),
-    fallback: "blocking",
+    fallback: false,
   };
 };
 
