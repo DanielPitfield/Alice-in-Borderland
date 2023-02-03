@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { CardName, CardSuite } from "../../../data/Cards/cardMappings";
-import { people } from "../../../data/people";
+import { people, type PersonName } from "../../../data/people";
 
 export type PersonData = {
   id: string;
-  name: string;
+  name: PersonName;
   japaneseName: string;
   gender: "Male" | "Female";
   occupation: string[];

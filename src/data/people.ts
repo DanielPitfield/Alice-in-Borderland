@@ -1,5 +1,25 @@
 import type { PersonData } from "../pages/api/people/[personID]";
 
+export type PersonName = typeof PersonNames[number];
+export const PersonNames = [
+  "Arisu",
+  "Usagi",
+  "Kuina",
+  "Chishiya",
+  "Aguni",
+  "Niragi",
+  "Mira",
+  "Saori",
+  "Karube",
+  "Chota",
+  "Hatter",
+  "Akane",
+  "Momoka",
+  "Asahi",
+  "Tatta",
+  "An",
+] as const;
+
 export const people: PersonData[] = [
   {
     id: "1",
@@ -187,5 +207,3 @@ export const people: PersonData[] = [
     gamesPlayed: ["4 of Diamonds", "10 of Hearts", "Queen of Diamonds", "King of Spades"],
   },
 ];
-
-export type PersonName = typeof people[number]["name"];

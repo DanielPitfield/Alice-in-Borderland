@@ -7,6 +7,7 @@ import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
+    // TODO: Add static paths of IDs
     paths: games.map((game) => ({
       params: {
         gameID: game.name,
