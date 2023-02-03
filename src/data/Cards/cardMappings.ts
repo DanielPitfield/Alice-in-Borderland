@@ -10,27 +10,10 @@ import { BsSuitDiamondFill } from "react-icons/bs";
 import { BsSuitHeartFill } from "react-icons/bs";
 import { BsSuitSpadeFill } from "react-icons/bs";
 
-export type CardRank =
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "10"
-  | "Jack"
-  | "Queen"
-  | "King";
-
+export type CardRank = "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "Jack" | "Queen" | "King";
 export type CardSuite = "Clubs" | "Diamonds" | "Hearts" | "Spades";
 
-type CardNameInner<
-  CardRank extends string,
-  CardSuite extends string
-> = `${CardRank} of ${CardSuite}`;
-
+type CardNameInner<CardRank extends string, CardSuite extends string> = `${CardRank} of ${CardSuite}`;
 export type CardName = CardNameInner<CardRank, CardSuite>;
 
 export const cardSuiteMappings: { suite: CardSuite; icon: IconType }[] = [
@@ -40,8 +23,4 @@ export const cardSuiteMappings: { suite: CardSuite; icon: IconType }[] = [
   { suite: "Spades", icon: BsSuitSpadeFill },
 ];
 
-export const cardMappings = clubsCardMappings.concat(
-  diamondsCardMappings,
-  heartsCardMappings,
-  spadesCardMappings
-);
+export const cardMappings = clubsCardMappings.concat(diamondsCardMappings, heartsCardMappings, spadesCardMappings);
