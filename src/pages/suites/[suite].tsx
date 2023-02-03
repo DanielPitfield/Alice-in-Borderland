@@ -2,7 +2,7 @@ import styles from "../../styles/Card.module.scss";
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Card from "../../components/Card";
-import { type CardName, CardSuites, CardRanks } from "../../data/Cards/cardMappings";
+import { type CardName, CardSuites, CardRanks, cardSuiteMappings } from "../../data/Cards/cardMappings";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -18,10 +18,14 @@ export const getStaticPaths: GetStaticPaths = () => {
 export function getStaticProps(context: GetStaticPropsContext<{ suite: string }>) {
   // TODO: Can the dynamic segment be typed as something other than string?
   const suite = context.params?.suite as string;
+  const description: string | undefined = cardSuiteMappings.find(
+    (x) => x.suite.toLowerCase() === suite.toLowerCase()
+  )?.description;
 
   return {
     props: {
       suite,
+      description
     },
     revalidate: 1,
   };
@@ -45,6 +49,7 @@ export default function SuitePage(props: InferGetStaticPropsType<typeof getStati
   return (
     <>
       <h1>{props.suite}</h1>
+      {props.description && (<h3>{props.description}</h3>)}
       <div className={styles.cardWrapper}>
         {allCards.map((card) => (
           <Card key={card} card={card} size={"large"} />

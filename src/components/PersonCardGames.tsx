@@ -10,6 +10,7 @@ interface PersonCardGamesProps {
 }
 
 const PersonCardGames = (props: PersonCardGamesProps) => {
+  // TODO: Conditionallly render both game speciality (atleast one suite) and games played (atleast one game)?
   return (
     <>
       <h3>Game Speciality</h3>
