@@ -11,7 +11,9 @@ import { BsSuitHeartFill } from "react-icons/bs";
 import { BsSuitSpadeFill } from "react-icons/bs";
 
 export type CardRank = "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "Jack" | "Queen" | "King";
-export type CardSuite = "Clubs" | "Diamonds" | "Hearts" | "Spades";
+
+export const CardSuites = ["Clubs" , "Diamonds" ,"Hearts" , "Spades"] as const;
+export type CardSuite = typeof CardSuites[number];
 
 type CardNameInner<CardRank extends string, CardSuite extends string> = `${CardRank} of ${CardSuite}`;
 export type CardName = CardNameInner<CardRank, CardSuite>;

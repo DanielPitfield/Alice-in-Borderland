@@ -2,22 +2,22 @@ import styles from "../../styles/Card.module.scss";
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Card from "../../components/Card";
-import type { CardName, CardSuite } from "../../data/Cards/cardMappings";
+import { type CardName, CardSuites } from "../../data/Cards/cardMappings";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
     paths: [
-      { params: { suite: "Clubs" as CardSuite } },
-      { params: { suite: "Diamonds" as CardSuite } },
-      { params: { suite: "Hearts" as CardSuite } },
-      { params: { suite: "Spades" as CardSuite } },
+      { params: { suite: "Clubs" } },
+      { params: { suite: "Diamonds" } },
+      { params: { suite: "Hearts" } },
+      { params: { suite: "Spades" } },
     ],
     fallback: "blocking",
   };
 };
 
-export function getStaticProps(context: GetStaticPropsContext<{ suite: CardSuite }>) {
-  const suite = context.params?.suite as CardSuite;
+export function getStaticProps(context: GetStaticPropsContext<{ suite: string }>) {
+  const suite = context.params?.suite as string;
 
   return {
     props: {
@@ -29,6 +29,10 @@ export function getStaticProps(context: GetStaticPropsContext<{ suite: CardSuite
 
 export default function SuitePage(props: InferGetStaticPropsType<typeof getStaticProps>) {
   if (!props.suite) {
+    return null;
+  }
+
+  if (!CardSuites.some((suite) => suite === props.suite)) {
     return null;
   }
 
