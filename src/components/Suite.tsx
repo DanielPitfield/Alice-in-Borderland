@@ -26,7 +26,7 @@ const Suite = (props: SuiteProps) => {
 
   return (
     <Link href={`/suites/${props.suite}`}>
-      <IconPath className={styles.icon} data-size={props.size} />
+      <IconPath className={styles.icon} title={props.suite} data-size={props.size} />
     </Link>
   );
 };

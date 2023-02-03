@@ -25,7 +25,7 @@ const Card = (props: CardProps) => {
       );
     }
 
-    return <IconPath className={styles.icon} data-size={props.size} data-disabled={!isLinkShown} />;
+    return <IconPath className={styles.icon} title={props.card} data-size={props.size} data-disabled={!isLinkShown} />;
   }
 
   // Add a link if there is data for the game/card
