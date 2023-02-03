@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export interface SuiteProps {
   suite: CardSuite;
+  size: "small" | "medium" | "large";
 }
 
 const Suite = (props: SuiteProps) => {
@@ -16,14 +17,16 @@ const Suite = (props: SuiteProps) => {
   if (!IconPath) {
     return (
       <Link href={`/suites/${props.suite}`}>
-        <div className={styles.text}>{props.suite}</div>
+        <div className={styles.text} data-size={props.size}>
+          {props.suite}
+        </div>
       </Link>
     );
   }
 
   return (
     <Link href={`/suites/${props.suite}`}>
-      <IconPath className={styles.icon} />
+      <IconPath className={styles.icon} data-size={props.size} />
     </Link>
   );
 };

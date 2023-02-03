@@ -1,23 +1,23 @@
 .cardWrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 2em;
-  margin: 0;
+  padding: 1em;
+  margin: 0.5em 2em;
 
   .text {
     display: flex;
     color: inherit;
 
     &[data-size="small"] {
-      font-size: 2em;
+      font-size: 1em;
     }
 
     &[data-size="medium"] {
-      font-size: 4em;
+      font-size: 2em;
     }
 
     &[data-size="large"] {
-      font-size: 6em;
+      font-size: 4em;
     }
   }
 
@@ -27,15 +27,15 @@
     margin: 0;
 
     &[data-size="small"] {
-      font-size: 6em;
+      font-size: 4em;
     }
 
     &[data-size="medium"] {
-      font-size: 10em;
+      font-size: 8em;
     }
 
     &[data-size="large"] {
-      font-size: 20em;
+      font-size: 18em;
     }
   }
 }

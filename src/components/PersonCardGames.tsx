@@ -15,7 +15,7 @@ const PersonCardGames = (props: PersonCardGamesProps) => {
       <h3>Game Speciality</h3>
       <div className={styles.cardWrapper}>
         {props.gameSpeciality.map((suite) => (
-          <Suite key={suite} suite={suite} />
+          <Suite key={suite} suite={suite} size={"small"} />
         ))}
       </div>
 
