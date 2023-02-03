@@ -10,7 +10,8 @@ import { BsSuitDiamondFill } from "react-icons/bs";
 import { BsSuitHeartFill } from "react-icons/bs";
 import { BsSuitSpadeFill } from "react-icons/bs";
 
-export type CardRank = "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "Jack" | "Queen" | "King";
+export const CardRanks = ["2" , "3" , "4" , "5" , "6", "7" ,"8", "9", "10" , "Jack", "Queen" , "King"] as const;
+export type CardRank = typeof CardRanks[number];
 
 export const CardSuites = ["Clubs" , "Diamonds" ,"Hearts" , "Spades"] as const;
 export type CardSuite = typeof CardSuites[number];

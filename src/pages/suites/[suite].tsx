@@ -2,7 +2,7 @@ import styles from "../../styles/Card.module.scss";
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Card from "../../components/Card";
-import { type CardName, CardSuites } from "../../data/Cards/cardMappings";
+import { type CardName, CardSuites, CardRanks } from "../../data/Cards/cardMappings";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -32,12 +32,15 @@ export default function SuitePage(props: InferGetStaticPropsType<typeof getStati
     return null;
   }
 
+  // Dynamic segment is not one of the four card suites
   if (!CardSuites.some((suite) => suite === props.suite)) {
     return null;
   }
 
-  // TODO: All the cards of the suite, not these hardcoded ones
-  const allCards: CardName[] = ["10 of Clubs", "10 of Diamonds"];
+  // Every CardName of the suite
+  const allCards: CardName[] = CardRanks.map((rank) => {
+    return `${rank} of ${props.suite}` as CardName;
+  });
 
   return (
     <>
