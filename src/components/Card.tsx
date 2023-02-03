@@ -19,13 +19,13 @@ const Card = (props: CardProps) => {
     // If the card image couldn't be found, just show the name of the card
     if (!IconPath) {
       return (
-        <div className={styles.text} data-size={props.size}>
+        <div className={styles.text} data-size={props.size} data-disabled={!isLinkShown}>
           {props.card}
         </div>
       );
     }
 
-    return <IconPath className={styles.icon} data-size={props.size} />;
+    return <IconPath className={styles.icon} data-size={props.size} data-disabled={!isLinkShown} />;
   }
 
   // Add a link if there is data for the game/card

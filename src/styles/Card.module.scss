@@ -8,6 +8,11 @@
     display: flex;
     color: inherit;
 
+     &[data-disabled="true"] {
+      opacity: 60%;
+      cursor: not-allowed;
+    }
+
     &[data-size="small"] {
       font-size: 1em;
     }
@@ -25,6 +30,11 @@
     display: flex;
     padding: 0;
     margin: 0;
+
+    &[data-disabled="true"] {
+      opacity: 60%;
+      cursor: not-allowed;
+    }
 
     &[data-size="small"] {
       font-size: 4em;
