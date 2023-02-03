@@ -8,6 +8,7 @@ import { games } from "../data/games";
 
 export interface CardProps {
   card: CardName;
+  size: "small" | "medium" | "large";
 }
 
 const Card = (props: CardProps) => {
@@ -17,10 +18,14 @@ const Card = (props: CardProps) => {
   function renderContent(): React.ReactNode {
     // If the card image couldn't be found, just show the name of the card
     if (!IconPath) {
-      return <div className={styles.text}>{props.card}</div>;
+      return (
+        <div className={styles.text} data-size={props.size}>
+          {props.card}
+        </div>
+      );
     }
 
-    return <IconPath className={styles.icon} />;
+    return <IconPath className={styles.icon} data-size={props.size} />;
   }
 
   // Add a link if there is data for the game/card

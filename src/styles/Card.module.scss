@@ -1,13 +1,41 @@
 .cardWrapper {
   display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin: 0;
 
   .text {
-    font-size: 2em;
+    display: flex;
+    color: inherit;
+
+    &[data-size="small"] {
+      font-size: 2em;
+    }
+
+    &[data-size="medium"] {
+      font-size: 4em;
+    }
+
+    &[data-size="large"] {
+      font-size: 6em;
+    }
   }
 
   .icon {
-    font-size: 6em;
+    display: flex;
     padding: 0;
     margin: 0;
+
+    &[data-size="small"] {
+      font-size: 6em;
+    }
+
+    &[data-size="medium"] {
+      font-size: 10em;
+    }
+
+    &[data-size="large"] {
+      font-size: 20em;
+    }
   }
 }

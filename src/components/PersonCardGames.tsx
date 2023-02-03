@@ -22,7 +22,7 @@ const PersonCardGames = (props: PersonCardGamesProps) => {
       <h3>Games Played</h3>
       <div className={styles.cardWrapper}>
         {props.gamesPlayed.map((game) => (
-          <Card key={game} card={game} />
+          <Card key={game} card={game} size={"medium"} />
         ))}
       </div>
     </>
