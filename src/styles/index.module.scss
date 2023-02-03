@@ -1,19 +1,7 @@
-.main {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #2e026d, #15162c);
-
-  .link {
-    font-size: 2em;
-    font-weight: bold;
-    color: #00a7cc;
-    padding: 0.5em;
-    
-    &:hover {
-      color: lighten(#00a7cc, 10%);
-    }
-  }
 }

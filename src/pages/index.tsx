@@ -13,30 +13,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={styles.wrapper}>
         <h3>Characters</h3>
 
-        <Link className={styles.link} href={"/people/1"}>
-          Arisu
-        </Link>
-        <Link className={styles.link} href={"/people/2"}>
-          Usagi
-        </Link>
+        <Link href={"/people/Arisu"}>Arisu</Link>
+        <Link href={"/people/Usagi"}>Usagi</Link>
 
         <h3>Suites</h3>
 
-        <Link className={styles.link} href={"/suites/Clubs"}>
-          Clubs
-        </Link>
-        <Link className={styles.link} href={"/suites/Diamonds"}>
-          Diamonds
-        </Link>
-        <Link className={styles.link} href={"/suites/Hearts"}>
-          Hearts
-        </Link>
-        <Link className={styles.link} href={"/suites/Spades"}>
-          Spades
-        </Link>
+        <Link href={"/suites/Clubs"}>Clubs</Link>
+        <Link href={"/suites/Diamonds"}>Diamonds</Link>
+        <Link href={"/suites/Hearts"}>Hearts</Link>
+        <Link href={"/suites/Spades"}>Spades</Link>
       </main>
     </>
   );
