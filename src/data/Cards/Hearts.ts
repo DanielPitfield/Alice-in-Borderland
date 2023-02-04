@@ -1,4 +1,4 @@
-import type { CardName } from "./cardMappings";
+import type { CardName } from "./AllCards";
 import type { IconType } from "react-icons/lib";
 
 import { GiCard2Hearts } from "react-icons/gi";
@@ -14,7 +14,7 @@ import { GiCardJackHearts } from "react-icons/gi";
 import { GiCardQueenHearts } from "react-icons/gi";
 import { GiCardKingHearts } from "react-icons/gi";
 
-export const heartsCardMappings: {
+export const HeartsCardMappings: {
   card: CardName;
   icon: IconType;
 }[] = [

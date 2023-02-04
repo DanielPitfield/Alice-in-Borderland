@@ -20,7 +20,7 @@ export const PersonNames = [
   "An",
 ] as const;
 
-export const people: PersonData[] = [
+export const People: PersonData[] = [
   {
     id: "1",
     name: "Arisu",

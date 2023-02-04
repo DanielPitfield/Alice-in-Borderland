@@ -1,6 +1,6 @@
-import type { GameData } from "../pages/api/games/[gameID]";
+import type { GameData } from "../../pages/api/games/[gameID]";
 
-export const games: GameData[] = [
+export const ClubsGames: GameData[] = [
   {
     id: "2C",
     cardName: "2 of Clubs",

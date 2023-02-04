@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { CardName, CardSuite } from "../../../data/Cards/cardMappings";
-import { people, type PersonName } from "../../../data/people";
+import type { CardName, CardSuite } from "../../../data/Cards/AllCards";
+import { People, type PersonName } from "../../../data/people";
 
 export type PersonData = {
   id: string;
@@ -14,7 +14,7 @@ export type PersonData = {
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<PersonData | { message: string }>) {
-  const person: PersonData | undefined = people.find(
+  const person: PersonData | undefined = People.find(
     (person) =>
       person.id === (req.query.personID as string) ||
       person.name.toLowerCase() === (req.query.personID as string).toLowerCase() ||

@@ -1,10 +1,10 @@
 import styles from "../styles/Card.module.scss";
 
 import type { IconType } from "react-icons/lib";
-import type { CardName } from "../data/Cards/cardMappings";
-import { cardMappings } from "../data/Cards/cardMappings";
+import type { CardName } from "../data/Cards/AllCards";
+import { CardMappings } from "../data/Cards/AllCards";
 import Link from "next/link";
-import { games } from "../data/games";
+import { Games } from "../data/Games/AllGames";
 
 export interface CardProps {
   card: CardName;
@@ -13,10 +13,10 @@ export interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  const IconPath: IconType | undefined = cardMappings.find((x) => x.card === props.card)?.icon;
+  const IconPath: IconType | undefined = CardMappings.find((x) => x.card === props.card)?.icon;
   const isLinkShown: boolean =
     props.hasLink &&
-    games.some(
+    Games.some(
       (game) =>
         game.id === props.card ||
         game.cardName.toLowerCase() === props.card.toLowerCase() ||

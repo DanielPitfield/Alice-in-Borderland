@@ -1,8 +1,8 @@
 import styles from "../styles/Card.module.scss";
 
 import type { IconType } from "react-icons/lib";
-import type { CardSuite } from "../data/Cards/cardMappings";
-import { cardSuiteMappings } from "../data/Cards/cardMappings";
+import type { CardSuite } from "../data/Cards/AllCards";
+import { CardSuiteMappings } from "../data/Cards/AllCards";
 import Link from "next/link";
 
 export interface SuiteProps {
@@ -11,7 +11,7 @@ export interface SuiteProps {
 }
 
 const Suite = (props: SuiteProps) => {
-  const IconPath: IconType | undefined = cardSuiteMappings.find((x) => x.suite === props.suite)?.icon;
+  const IconPath: IconType | undefined = CardSuiteMappings.find((x) => x.suite === props.suite)?.icon;
 
   // If the card image couldn't be found, just show the name of the card
   if (!IconPath) {

@@ -1,9 +1,9 @@
 import type { IconType } from "react-icons/lib";
 
-import { clubsCardMappings } from "./Clubs";
-import { diamondsCardMappings } from "./Diamonds";
-import { heartsCardMappings } from "./Hearts";
-import { spadesCardMappings } from "./Spades";
+import { ClubsCardMappings } from "./Clubs";
+import { DiamondsCardMappings } from "./Diamonds";
+import { HeartsCardMappings } from "./Hearts";
+import { SpadesCardMappings } from "./Spades";
 
 import { BsSuitClubFill } from "react-icons/bs";
 import { BsSuitDiamondFill } from "react-icons/bs";
@@ -19,7 +19,7 @@ export type CardSuite = typeof CardSuites[number];
 type CardNameInner<CardRank extends string, CardSuite extends string> = `${CardRank} of ${CardSuite}`;
 export type CardName = CardNameInner<CardRank, CardSuite>;
 
-export const cardSuiteMappings: { suite: CardSuite; description: string; icon: IconType }[] = [
+export const CardSuiteMappings: { suite: CardSuite; description: string; icon: IconType }[] = [
   {
     suite: "Clubs",
     description:
@@ -39,4 +39,4 @@ export const cardSuiteMappings: { suite: CardSuite; description: string; icon: I
   },
 ];
 
-export const cardMappings = clubsCardMappings.concat(diamondsCardMappings, heartsCardMappings, spadesCardMappings);
+export const CardMappings = ClubsCardMappings.concat(DiamondsCardMappings, HeartsCardMappings, SpadesCardMappings);

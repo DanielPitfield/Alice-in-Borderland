@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { CardName } from "../../../data/Cards/cardMappings";
-import { games } from "../../../data/games";
+import type { CardName } from "../../../data/Cards/AllCards";
+import { Games } from "../../../data/Games/AllGames";
 import type { PersonName } from "../../../data/people";
 
 export type GameData = {
@@ -29,7 +29,7 @@ export type GameData = {
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<GameData | { message: string }>) {
-  const game: GameData | undefined = games.find(
+  const game: GameData | undefined = Games.find(
     (game) =>
       game.id === (req.query.gameID as string) ||
       game.cardName.toLowerCase() === (req.query.gameID as string).toLowerCase() ||

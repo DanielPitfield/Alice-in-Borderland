@@ -1,14 +1,14 @@
 import { createProxySSGHelpers } from "@trpc/react-query/ssg";
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Game from "../../components/Game";
-import { games } from "../../data/games";
+import { Games } from "../../data/Games/AllGames";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
     // TODO: Add static paths of IDs
-    paths: games.map((game) => ({
+    paths: Games.map((game) => ({
       params: {
         gameID: game.cardName,
       },

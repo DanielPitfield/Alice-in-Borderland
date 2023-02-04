@@ -1,4 +1,4 @@
-import type { CardName } from "./cardMappings";
+import type { CardName } from "./AllCards";
 import type { IconType } from "react-icons/lib";
 
 import { GiCard2Clubs } from "react-icons/gi";
@@ -14,21 +14,20 @@ import { GiCardJackClubs } from "react-icons/gi";
 import { GiCardQueenClubs } from "react-icons/gi";
 import { GiCardKingClubs } from "react-icons/gi";
 
-export const clubsCardMappings: {
+export const ClubsCardMappings: {
   card: CardName;
   icon: IconType;
 }[] = [
   { card: "2 of Clubs", icon: GiCard2Clubs },
-  { card: "3 of Clubs", icon: GiCard3Clubs  },
-  { card: "4 of Clubs", icon: GiCard4Clubs  },
+  { card: "3 of Clubs", icon: GiCard3Clubs },
+  { card: "4 of Clubs", icon: GiCard4Clubs },
   { card: "5 of Clubs", icon: GiCard5Clubs },
-  { card: "6 of Clubs", icon: GiCard6Clubs  },
-  { card: "7 of Clubs", icon: GiCard7Clubs  },
-  { card: "8 of Clubs", icon: GiCard8Clubs  },
-  { card: "9 of Clubs", icon: GiCard9Clubs  },
-  { card: "10 of Clubs", icon: GiCard10Clubs  },
-  { card: "Jack of Clubs", icon: GiCardJackClubs  },
-  { card: "Queen of Clubs", icon: GiCardQueenClubs  },
-  { card: "King of Clubs", icon: GiCardKingClubs  },
+  { card: "6 of Clubs", icon: GiCard6Clubs },
+  { card: "7 of Clubs", icon: GiCard7Clubs },
+  { card: "8 of Clubs", icon: GiCard8Clubs },
+  { card: "9 of Clubs", icon: GiCard9Clubs },
+  { card: "10 of Clubs", icon: GiCard10Clubs },
+  { card: "Jack of Clubs", icon: GiCardJackClubs },
+  { card: "Queen of Clubs", icon: GiCardQueenClubs },
+  { card: "King of Clubs", icon: GiCardKingClubs },
 ];
-

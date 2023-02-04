@@ -1,6 +1,6 @@
 import styles from "../styles/Card.module.scss";
 
-import type { CardName, CardSuite } from "../data/Cards/cardMappings";
+import type { CardName, CardSuite } from "../data/Cards/AllCards";
 import Card from "./Card";
 import Suite from "./Suite";
 
