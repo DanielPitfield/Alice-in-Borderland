@@ -10,21 +10,20 @@ interface PersonCardGamesProps {
 }
 
 const PersonCardGames = (props: PersonCardGamesProps) => {
-  // TODO: Conditionallly render both game speciality (atleast one suite) and games played (atleast one game)?
   return (
     <>
       <h3>Game Speciality</h3>
       <div className={styles.cardWrapper}>
-        {props.gameSpeciality.map((suite) => (
-          <Suite key={suite} suite={suite} size={"small"} />
-        ))}
+        {props.gameSpeciality.length > 0
+          ? props.gameSpeciality.map((suite) => <Suite key={suite} suite={suite} size={"small"} />)
+          : "-"}
       </div>
 
       <h3>Games Played</h3>
       <div className={styles.cardWrapper}>
-        {props.gamesPlayed.map((game) => (
-          <Card key={game} card={game} size={"medium"} />
-        ))}
+        {props.gamesPlayed.length > 0
+          ? props.gamesPlayed.map((game) => <Card key={game} card={game} size={"medium"} />)
+          : "-"}
       </div>
     </>
   );

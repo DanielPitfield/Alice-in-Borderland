@@ -10,8 +10,6 @@ export interface SuiteProps {
   size: "small" | "medium" | "large";
 }
 
-// TODO: Suite description
-
 const Suite = (props: SuiteProps) => {
   const IconPath: IconType | undefined = cardSuiteMappings.find((x) => x.suite === props.suite)?.icon;
 
