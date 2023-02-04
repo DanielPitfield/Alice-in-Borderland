@@ -11,8 +11,21 @@ export type GameData = {
   cardName: CardName;
   // Main characters which participated in the game
   players: PersonName[];
-  additionalPlayers: string[];
-  description: string;
+  // Side characters which participated in the game
+  additionalPlayers?: string[];
+  // Face card games have borderland citizens
+  citizens?: PersonName[];
+  // How was the game entered, played and solved?
+  description?: {
+    registration?: {
+      playerLimit?: number | "None";
+      timeLimit?: string;
+      prize?: string;
+    };
+    rules?: string[];
+    details?: string;
+    solution?: string;
+  };
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<GameData | { message: string }>) {

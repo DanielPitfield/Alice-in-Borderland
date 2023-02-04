@@ -8,6 +8,7 @@ export interface GameProps {
   game: GameData;
 }
 
+// TODO: GameDescription component (handles and displays the large description object of GameData)
 const Game = (props: GameProps) => {
   return (
     <article className={styles.wrapper}>
@@ -23,8 +24,7 @@ const Game = (props: GameProps) => {
           );
         })}
       </div>
-      <div>{props.game.additionalPlayers.join(" , ")}</div>
-      <div>{props.game.description}</div>
+      <div>{props.game.additionalPlayers?.join(" , ")}</div>
     </article>
   );
 };
