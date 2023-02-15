@@ -16,8 +16,7 @@ export type CardRank = typeof CardRanks[number];
 export const CardSuites = ["Clubs", "Diamonds", "Hearts", "Spades"] as const;
 export type CardSuite = typeof CardSuites[number];
 
-type CardNameInner<CardRank extends string, CardSuite extends string> = `${CardRank} of ${CardSuite}`;
-export type CardName = CardNameInner<CardRank, CardSuite>;
+export type CardName = `${CardRank} of ${CardSuite}`;
 
 export const CardSuiteMappings: { suite: CardSuite; description: string; icon: IconType }[] = [
   {
