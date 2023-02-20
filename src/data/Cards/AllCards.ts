@@ -22,18 +22,18 @@ export const CardSuiteMappings: { suite: CardSuite; description: string; icon: I
   {
     suite: "Clubs",
     description:
-      "Balance - Games that balance all three concepts of the other card suites (Intelligence, Psychology and Physical) with an element of teamwork",
+      "Games that balance all three concepts of the other card suites (Intelligence, Psychology and Physical) with an element of teamwork",
     icon: BsSuitClubFill,
   },
   {
     suite: "Diamonds",
-    description: "Intelligence - Games of intelligence, strategy, and wits",
+    description: "Games of intelligence, strategy, and wits",
     icon: BsSuitDiamondFill,
   },
-  { suite: "Hearts", description: "Psychology - Games of psychology, trust, and betrayal", icon: BsSuitHeartFill },
+  { suite: "Hearts", description: "Games of psychology, trust, and betrayal", icon: BsSuitHeartFill },
   {
     suite: "Spades",
-    description: "Physical - Games of physical endurance, strength, and agility",
+    description: "Games of physical endurance, strength, and agility",
     icon: BsSuitSpadeFill,
   },
 ];
