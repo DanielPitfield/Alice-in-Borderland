@@ -1,24 +1,15 @@
 import styles from "../styles/Card.module.scss";
 
-import type { CardName, CardSuite } from "../data/Cards/AllCards";
 import Card from "./Card";
-import Suite from "./Suite";
+import type { PersonData } from "../pages/api/people/[personID]";
 
 interface PersonCardGamesProps {
-  gameSpeciality: CardSuite[];
-  gamesPlayed: CardName[];
+  gamesPlayed: PersonData["gamesPlayed"];
 }
 
 const PersonCardGames = (props: PersonCardGamesProps) => {
   return (
     <>
-      <h3>Game Speciality</h3>
-      <div className={styles.cardWrapper}>
-        {props.gameSpeciality.length > 0
-          ? props.gameSpeciality.map((suite) => <Suite key={suite} suite={suite} size={"small"} />)
-          : "-"}
-      </div>
-
       <h3>Games Played</h3>
       <div className={styles.cardWrapper}>
         {props.gamesPlayed.length > 0
