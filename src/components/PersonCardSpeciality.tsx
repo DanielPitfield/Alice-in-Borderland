@@ -9,14 +9,11 @@ interface PersonCardSpecialityProps {
 
 const PersonCardSpeciality = (props: PersonCardSpecialityProps) => {
   return (
-    <>
-      <h3>Game Speciality</h3>
-      <div className={styles.cardWrapper}>
-        {props.gameSpeciality.length > 0
-          ? props.gameSpeciality.map((suite) => <Suite key={suite} suite={suite} size={"small"} />)
-          : "-"}
-      </div>
-    </>
+    <div className={styles.cardWrapper}>
+      {props.gameSpeciality.length > 0
+        ? props.gameSpeciality.map((suite) => <Suite key={suite} suite={suite} size={"small"} />)
+        : "-"}
+    </div>
   );
 };
 
