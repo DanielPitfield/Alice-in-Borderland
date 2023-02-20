@@ -11,21 +11,19 @@ export interface PersonProps {
 }
 
 // TODO: Image src path
-// TODO: Maybe show game speciality next to title (would need to decouple from PersonCardGames)
-// TODO: Then information/facts/bio and list of cards/games played
 const Person = (props: PersonProps) => {
   return (
     <article className={styles.wrapper}>
       <div className={styles.imageWrapper}>
+        <Image className={styles.image} src={"/Images/usagi.gif"} alt={props.person.name} width={600} height={600} />
+      </div>
+
+      <div className={styles.info}>
         <PersonHeader
           name={props.person.name}
           japaneseName={props.person.japaneseName}
           gameSpeciality={props.person.gameSpeciality}
         />
-        <Image className={styles.image} src={"/Images/usagi.gif"} alt={props.person.name} width={600} height={600} />
-      </div>
-
-      <div className={styles.info}>
         <PersonFacts person={props.person} />
         <PersonCardGames gamesPlayed={props.person.gamesPlayed} />
       </div>
