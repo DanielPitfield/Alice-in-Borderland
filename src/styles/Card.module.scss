@@ -1,3 +1,17 @@
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin: 0.5em 0;
+  }
+
+  .subtitle {
+    margin: 0 0 2em 0;
+  }
+}
+
 .cardWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +59,6 @@
   }
 
   &[data-size="large"] {
-    font-size: 18em;
+    font-size: 16em;
   }
 }

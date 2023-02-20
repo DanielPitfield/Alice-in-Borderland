@@ -49,8 +49,11 @@ export default function SuitePage(props: InferGetStaticPropsType<typeof getStati
 
   return (
     <>
-      <h1>{props.suite}</h1>
-      {props.description && <h3>{props.description}</h3>}
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>{props.suite}</h1>
+        {props.description && <h3 className={styles.subtitle}>{props.description}</h3>}
+      </div>
+
       <div className={styles.cardWrapper}>
         {allCards.map((card) => (
           <Card key={card} card={card} size={"large"} hasLink />
