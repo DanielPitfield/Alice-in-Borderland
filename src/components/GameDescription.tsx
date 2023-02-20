@@ -13,18 +13,39 @@ const GameDescription = (props: GameDescriptionProps) => {
 
   return (
     <div className={styles.wrapper}>
-      <h3>Registration</h3>
-      <div>Player Limit: {props.description.registration?.playerLimit ?? "-"}</div>
-      <div>Time Limit: {props.description.registration?.timeLimit ?? "-"}</div>
-      <div>Prize: {props.description.registration?.prize ?? "-"}</div>
+      {props.description.registration && (
+        <>
+          <h3>Registration</h3>
+          <div>Player Limit: {props.description.registration.playerLimit ?? "None"}</div>
+          <div>Time Limit: {props.description.registration.timeLimit ?? "None"}</div>
+          <div>Prize: {props.description.registration.prize ?? "None"}</div>
+        </>
+      )}
 
-      <ul>
-        {props.description.rules?.map((rule, index) => (
-          <li key={index}>{rule}</li>
-        ))}
-      </ul>
-      <div>Details: {props.description.details ?? "-"}</div>
-      <div>Solution: {props.description.solution ?? "-"}</div>
+      {props.description.rules && (
+        <>
+          <h3>Rules</h3>
+          <ul>
+            {props.description.rules.map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {props.description.details && (
+        <>
+          <h3>Details</h3>
+          <div>{props.description.details}</div>
+        </>
+      )}
+
+      {props.description.solution && (
+        <>
+          <h3>Solution</h3>
+          <div>{props.description.solution}</div>
+        </>
+      )}
     </div>
   );
 };
