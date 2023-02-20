@@ -2,14 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: #797878;
-  margin: 2em 10em;
+  border-radius: 6px;
+  margin: 5em 10em;
 
   .imageWrapper {
     display: flex;
     flex-direction: column;
-    flex-grow: 0.3;
 
     .image {
       border-radius: 6px;
@@ -22,7 +21,7 @@
     flex-basis: 15em;
     flex-grow: 1;
     flex-shrink: 0;
-    margin: 1em;
+    margin: 0 2em;
 
     .titleWrapper {
       display: flex;

@@ -15,7 +15,7 @@ const Person = (props: PersonProps) => {
   return (
     <article className={styles.wrapper}>
       <div className={styles.imageWrapper}>
-        <Image className={styles.image} src={"/Images/usagi.gif"} alt={props.person.name} width={600} height={600} />
+        <Image className={styles.image} src={"/Images/usagi.gif"} alt={props.person.name} width={650} height={650} />
       </div>
 
       <div className={styles.info}>
