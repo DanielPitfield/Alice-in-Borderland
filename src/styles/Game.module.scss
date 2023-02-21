@@ -1,4 +1,29 @@
 .wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #797878;
+  border-radius: 6px;
+
+  .imageWrapper {
+    display: flex;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin: 0 2em;
+
+    .titleWrapper {
+      display: flex;
+
+      .title {
+        display: flex;
+        margin: 0.5em 0.3em 0.5em 0;
+      }
+    }
+  }
 }

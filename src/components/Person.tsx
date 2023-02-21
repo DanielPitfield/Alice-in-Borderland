@@ -24,7 +24,11 @@ const Person = (props: PersonProps) => {
           japaneseName={props.person.japaneseName}
           gameSpeciality={props.person.gameSpeciality}
         />
-        <PersonFacts person={props.person} />
+        <PersonFacts
+          gender={props.person.gender}
+          occupation={props.person.occupation}
+          borderlandCitizenship={props.person.borderlandCitizenship}
+        />
         <PersonCardGames gamesPlayed={props.person.gamesPlayed} />
       </div>
     </article>
