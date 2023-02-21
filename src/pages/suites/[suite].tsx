@@ -6,7 +6,7 @@ import { type CardName, CardSuites, CardRanks, CardSuiteMappings } from "../../d
 
 export const getStaticPaths: GetStaticPaths = () => {
   // Paths need to be strings (and also add the Joker!)
-  const allCardSuites: string[] = CardSuites.map((x) => x as string).concat("Joker");
+  const allCardSuites: string[] = CardSuites.map((suite) => suite as string).concat("Joker");
 
   return {
     paths: allCardSuites.map((suite) => ({

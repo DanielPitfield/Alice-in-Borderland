@@ -1,16 +1,18 @@
 import { createProxySSGHelpers } from "@trpc/react-query/ssg";
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Person from "../../components/Person";
-import { PersonNames } from "../../data/people";
+import { People, PersonNames } from "../../data/people";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
+  // Paths need to be strings (allow both the person name and their id)
+  const allPaths: string[] = PersonNames.map((name) => name as string).concat(People.map((person) => person.id));
+
   return {
-    // TODO: Add static paths of IDs
-    paths: PersonNames.map((name) => ({
+    paths: allPaths.map((path) => ({
       params: {
-        personID: name,
+        personID: path,
       },
     })),
     fallback: false,

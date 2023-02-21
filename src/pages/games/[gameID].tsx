@@ -6,11 +6,15 @@ import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
+  // Paths need to be strings (allow both the game name and the game id)
+  const allPaths: string[] = Games.map((game) => game.name ?? "")
+    .concat(Games.map((game) => game.id))
+    .filter((x) => x);
+
   return {
-    // TODO: Add static paths of IDs
-    paths: Games.map((game) => ({
+    paths: allPaths.map((path) => ({
       params: {
-        gameID: game.cardName,
+        gameID: path,
       },
     })),
     fallback: false,
