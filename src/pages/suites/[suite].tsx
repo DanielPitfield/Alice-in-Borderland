@@ -61,7 +61,7 @@ export default function SuitePage(props: InferGetStaticPropsType<typeof getStati
 
       <div className={styles.cardWrapper}>
         {allCards.map((card) => (
-          <Card key={card} card={card} size={"large"} hasLink />
+          <Card key={card} card={card} size={card === "Joker" ? "very large" : "large"} hasLink />
         ))}
       </div>
     </>

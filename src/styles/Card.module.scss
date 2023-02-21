@@ -38,6 +38,10 @@
   &[data-size="large"] {
     font-size: 4em;
   }
+
+  &[data-size="very large"] {
+    font-size: 6em;
+  }
 }
 
 .icon {
@@ -60,5 +64,9 @@
 
   &[data-size="large"] {
     font-size: 16em;
+  }
+
+  &[data-size="very large"] {
+    font-size: 24em;
   }
 }

@@ -15,16 +15,15 @@ const Home: NextPage = () => {
 
       <main className={styles.wrapper}>
         <h3>Characters</h3>
-
         <Link href={"/people/Arisu"}>Arisu</Link>
         <Link href={"/people/Usagi"}>Usagi</Link>
 
         <h3>Suites</h3>
-
         <Link href={"/suites/Clubs"}>Clubs</Link>
         <Link href={"/suites/Diamonds"}>Diamonds</Link>
         <Link href={"/suites/Hearts"}>Hearts</Link>
         <Link href={"/suites/Spades"}>Spades</Link>
+        <Link href={"/suites/Joker"}>Joker</Link>
       </main>
     </>
   );

@@ -8,7 +8,7 @@ import { Games } from "../data/Games/AllGames";
 
 export interface CardProps {
   card: CardName;
-  size: "small" | "medium" | "large";
+  size: "small" | "medium" | "large" | "very large";
   hasLink: boolean;
 }
 
