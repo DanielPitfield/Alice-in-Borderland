@@ -18,8 +18,7 @@ export const ClubsGames: GameData[] = [
     description: {
       registration: {
         playerLimit: "None",
-        timeLimit: "Until all lanterns go out",
-        prize: "None",
+        timeLimit: "Until all lanterns go out"
       },
       rules: [
         "Each player draws a paper fortune",

@@ -12,20 +12,19 @@ const GameDescription = (props: GameDescriptionProps) => {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <>
       {props.description.registration && (
         <>
-          <h3>Registration</h3>
+          <h3 className={styles.subtitle}>Registration</h3>
           <div>Player Limit: {props.description.registration.playerLimit ?? "None"}</div>
           <div>Time Limit: {props.description.registration.timeLimit ?? "None"}</div>
-          <div>Prize: {props.description.registration.prize ?? "None"}</div>
         </>
       )}
 
       {props.description.rules && (
         <>
-          <h3>Rules</h3>
-          <ul>
+          <h3 className={styles.subtitle}>Rules</h3>
+          <ul className={styles.list}>
             {props.description.rules.map((rule, index) => (
               <li key={index}>{rule}</li>
             ))}
@@ -35,18 +34,18 @@ const GameDescription = (props: GameDescriptionProps) => {
 
       {props.description.details && (
         <>
-          <h3>Details</h3>
+          <h3 className={styles.subtitle}>Details</h3>
           <div>{props.description.details}</div>
         </>
       )}
 
       {props.description.solution && (
         <>
-          <h3>Solution</h3>
+          <h3 className={styles.subtitle}>Solution</h3>
           <div>{props.description.solution}</div>
         </>
       )}
-    </div>
+    </>
   );
 };
 

@@ -13,9 +13,10 @@ const GamePlayers = (props: GamePlayersProps) => {
   return (
     <>
       <div>
+        Players:
         {props.players.map((player) => {
           return (
-            <Link key={player} href={`/people/${player}`}>
+            <Link className={styles.link} key={player} href={`/people/${player}`}>
               {player}
             </Link>
           );
@@ -28,7 +29,7 @@ const GamePlayers = (props: GamePlayersProps) => {
         <div>
           {props.citizens.map((citizen) => {
             return (
-              <Link key={citizen} href={`/people/${citizen}`}>
+              <Link className={styles.link} key={citizen} href={`/people/${citizen}`}>
                 {citizen}
               </Link>
             );

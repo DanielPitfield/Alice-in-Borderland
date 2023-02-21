@@ -20,7 +20,6 @@ export type GameData = {
     registration?: {
       playerLimit?: number | "None";
       timeLimit?: string;
-      prize?: string;
     };
     rules?: string[];
     details?: string;
