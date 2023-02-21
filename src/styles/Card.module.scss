@@ -16,6 +16,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+
+  &[data-align="left"] {
+    justify-content: left;
+  }
 }
 
 .text {
@@ -40,7 +45,7 @@
   }
 
   &[data-size="very large"] {
-    font-size: 6em;
+    font-size: 8em;
   }
 }
 
@@ -67,6 +72,6 @@
   }
 
   &[data-size="very large"] {
-    font-size: 24em;
+    font-size: 32em;
   }
 }
