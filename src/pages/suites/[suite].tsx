@@ -2,7 +2,7 @@ import styles from "../../styles/Card.module.scss";
 
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Card from "../../components/Card";
-import { type CardName, CardSuites, CardRanks, CardSuiteMappings } from "../../data/Cards/AllCards";
+import { type CardName, CardSuites, CardRanks, CardSuiteMappings, type CardSuite } from "../../data/Cards/AllCards";
 
 export const getStaticPaths: GetStaticPaths = () => {
   // Paths need to be strings (and also add the Joker!)
@@ -18,9 +18,10 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export function getStaticProps(context: GetStaticPropsContext<{ suite: string }>) {
-  // TODO: Can the dynamic segment be typed as something other than string?
-  const suite = context.params?.suite as string;
+export function getStaticProps(context: GetStaticPropsContext<{ suite: CardSuite | "Joker" }>) {
+  const suiteParam = context.params?.suite as string;
+
+  const suite = suiteParam as CardSuite | "Joker";
   const description: string | undefined = CardSuiteMappings.find(
     (x) => x.suite.toLowerCase() === suite.toLowerCase()
   )?.description;
