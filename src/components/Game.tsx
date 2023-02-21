@@ -1,10 +1,10 @@
 import styles from "../styles/Game.module.scss";
 
 import type { GameData } from "../pages/api/games/[gameID]";
-import Link from "next/link";
 import Card from "./Card";
 import GameDescription from "./GameDescription";
 import GameHeader from "./GameHeader";
+import GamePlayers from "./GamePlayers";
 
 export interface GameProps {
   game: GameData;
@@ -19,31 +19,11 @@ const Game = (props: GameProps) => {
 
       <div className={styles.info}>
         <GameHeader cardName={props.game.cardName} name={props.game.name} />
-
-        <div>
-          {props.game.players.map((player) => {
-            return (
-              <Link key={player} href={`/people/${player}`}>
-                {player}
-              </Link>
-            );
-          })}
-        </div>
-
-        <div>{props.game.additionalPlayers?.join(" , ")}</div>
-
-        {props.game.citizens && (
-          <div>
-            {props.game.citizens.map((citizen) => {
-              return (
-                <Link key={citizen} href={`/people/${citizen}`}>
-                  {citizen}
-                </Link>
-              );
-            })}
-          </div>
-        )}
-        
+        <GamePlayers
+          players={props.game.players}
+          additionalPlayers={props.game.additionalPlayers}
+          citizens={props.game.citizens}
+        />
         <GameDescription description={props.game.description} />
       </div>
     </article>
