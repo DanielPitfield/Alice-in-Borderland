@@ -12,16 +12,18 @@ interface GamePlayersProps {
 const GamePlayers = (props: GamePlayersProps) => {
   return (
     <>
-      <div>
-        Players:
-        {props.players.map((player) => {
-          return (
-            <Link className={styles.link} key={player} href={`/people/${player}`}>
-              {player}
-            </Link>
-          );
-        })}
-      </div>
+      {props.players.length > 0 && (
+        <div>
+          Players:
+          {props.players.map((player) => {
+            return (
+              <Link className={styles.link} key={player} href={`/people/${player}`}>
+                {player}
+              </Link>
+            );
+          })}
+        </div>
+      )}
 
       {props.additionalPlayers && <div>{props.additionalPlayers.join(" , ")}</div>}
 
