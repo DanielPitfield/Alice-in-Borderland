@@ -39,8 +39,8 @@ export default function SuitePage(props: InferGetStaticPropsType<typeof getStati
     return null;
   }
 
-  // Dynamic segment is not one of the four card suites
-  if (!CardSuites.some((suite) => suite === props.suite)) {
+  // Dynamic segment is not one of the four card suites (or Joker)
+  if (!CardSuites.some((suite) => suite === props.suite) && props.suite !== "Joker") {
     return null;
   }
 
