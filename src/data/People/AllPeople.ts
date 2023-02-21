@@ -1,4 +1,4 @@
-import type { PersonData } from "../pages/api/people/[personID]";
+import type { PersonData } from "../../pages/api/people/[personID]";
 
 export type PersonName = typeof PersonNames[number];
 export const PersonNames = [

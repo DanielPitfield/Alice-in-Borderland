@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { CardName } from "../../../data/Cards/AllCards";
 import { Games } from "../../../data/Games/AllGames";
-import type { PersonName } from "../../../data/people";
+import type { PersonName } from "../../../data/People/AllPeople";
 
 export type GameData = {
   id: string;

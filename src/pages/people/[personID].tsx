@@ -1,7 +1,7 @@
 import { createProxySSGHelpers } from "@trpc/react-query/ssg";
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Person from "../../components/Person";
-import { People, PersonNames } from "../../data/people";
+import { People, PersonNames } from "../../data/People/AllPeople";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
 

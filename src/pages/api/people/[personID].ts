@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { CardName, CardSuite } from "../../../data/Cards/AllCards";
-import { People, type PersonName } from "../../../data/people";
+import { People, type PersonName } from "../../../data/People/AllPeople";
 
 export type PersonData = {
   id: string;
