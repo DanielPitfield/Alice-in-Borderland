@@ -4,10 +4,12 @@ import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } f
 import Card from "../../components/Card";
 import { type CardName, CardSuites, CardRanks, CardSuiteMappings } from "../../data/Cards/AllCards";
 
-// TODO: Joker card?
 export const getStaticPaths: GetStaticPaths = () => {
+  // Paths need to be strings (and also add the Joker!)
+  const allCardSuites: string[] = CardSuites.map((x) => x as string).concat("Joker");
+
   return {
-    paths: CardSuites.map((suite) => ({
+    paths: allCardSuites.map((suite) => ({
       params: {
         suite,
       },
@@ -43,9 +45,12 @@ export default function SuitePage(props: InferGetStaticPropsType<typeof getStati
   }
 
   // Every CardName of the suite
-  const allCards: CardName[] = CardRanks.map((rank) => {
-    return `${rank} of ${props.suite}` as CardName;
-  });
+  const allCards: CardName[] =
+    props.suite === "Joker"
+      ? ["Joker"]
+      : CardRanks.map((rank) => {
+          return `${rank} of ${props.suite}` as CardName;
+        });
 
   return (
     <>
