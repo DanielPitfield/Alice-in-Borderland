@@ -32,7 +32,7 @@ const Navbar = () => {
             onMouseEnter={() => setCurrentSubMenuName(item.name)}
             onMouseLeave={() => setCurrentSubMenuName(null)}
           >
-            <span>{item.name}</span>
+            {item.name}
             {currentSubMenuName === item.name && item.subItem}
           </li>
         ))}
