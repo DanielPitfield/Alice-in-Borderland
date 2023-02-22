@@ -6,9 +6,11 @@ import { CardMappings } from "../data/Cards/AllCards";
 import Link from "next/link";
 import { Games } from "../data/Games/AllGames";
 
+export type Size = "small" | "medium" | "large" | "very large";
+
 export interface CardProps {
   card: CardName;
-  size: "small" | "medium" | "large" | "very large";
+  size: Size;
   hasLink: boolean;
 }
 

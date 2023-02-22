@@ -5,7 +5,7 @@ import Link from "next/link";
 import SubNavSuites from "./SubNavSuites";
 import SubNavPeople from "./SubNavPeople";
 
-export type NavbarItem = {
+type NavbarItem = {
   name: string;
   subItem: React.ReactNode;
 };

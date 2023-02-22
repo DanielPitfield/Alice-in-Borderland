@@ -3,11 +3,12 @@ import styles from "../styles/Card.module.scss";
 import type { IconType } from "react-icons/lib";
 import type { CardSuite } from "../data/Cards/AllCards";
 import { CardSuiteMappings } from "../data/Cards/AllCards";
+import type { Size } from "./Card";
 import Link from "next/link";
 
 export interface SuiteProps {
   suite: CardSuite;
-  size: "small" | "medium" | "large" | "very large";
+  size: Size;
 }
 
 const Suite = (props: SuiteProps) => {
