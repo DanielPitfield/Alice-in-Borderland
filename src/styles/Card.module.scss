@@ -34,6 +34,11 @@
     cursor: not-allowed;
   }
 
+  &[data-is-face-card="true"] {
+    mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
+    animation: shimmer 4s infinite;
+  }
+
   &[data-size="small"] {
     font-size: 1em;
   }
@@ -61,6 +66,11 @@
     cursor: not-allowed;
   }
 
+  &[data-is-face-card="true"] {
+    mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
+    animation: shimmer 4s infinite;
+  }
+
   &[data-size="small"] {
     font-size: 4em;
   }
@@ -75,5 +85,11 @@
 
   &[data-size="very large"] {
     font-size: 32em;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    mask-position: left;
   }
 }
