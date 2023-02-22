@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #797878;
-  min-height: 100vh;
+  background-color: #ddd;
+  min-height: calc(100vh - 69px);
 
   .imageWrapper {
     display: flex;
