@@ -2,7 +2,7 @@ import styles from "../styles/index.module.scss";
 
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import CardWall from "../components/CardWall";
 
 const Home: NextPage = () => {
   return (
@@ -14,16 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.wrapper}>
-        <h3>Characters</h3>
-        <Link href={"/people/Arisu"}>Arisu</Link>
-        <Link href={"/people/Usagi"}>Usagi</Link>
-
-        <h3>Suites</h3>
-        <Link href={"/suites/Clubs"}>Clubs</Link>
-        <Link href={"/suites/Diamonds"}>Diamonds</Link>
-        <Link href={"/suites/Hearts"}>Hearts</Link>
-        <Link href={"/suites/Spades"}>Spades</Link>
-        <Link href={"/suites/Joker"}>Joker</Link>
+        <CardWall />
       </main>
     </>
   );
