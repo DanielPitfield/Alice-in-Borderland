@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   background-color: #797878;
-  border-radius: 6px;
   min-height: 100vh;
 
   .imageWrapper {
@@ -42,7 +41,9 @@
       margin: 0;
     }
 
-    .list, .details, .solution {
+    .list,
+    .details,
+    .solution {
       font-size: 0.9em;
     }
   }
