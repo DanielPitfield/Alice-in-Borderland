@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export interface SuiteProps {
   suite: CardSuite;
-  size: "small" | "medium" | "large";
+  size: "small" | "medium" | "large" | "very large";
 }
 
 const Suite = (props: SuiteProps) => {
