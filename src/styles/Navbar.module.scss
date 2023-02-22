@@ -33,7 +33,10 @@
       & > a {
         color: inherit;
         text-decoration: none;
-        padding: 1em;
+
+        &[data-has-path="false"] {
+          padding: 1em;
+        }
       }
 
       &:hover {

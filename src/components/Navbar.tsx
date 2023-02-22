@@ -31,10 +31,11 @@ const Navbar = () => {
           <li
             key={item.name}
             className={styles.item}
+            data-has-path={Boolean(item.path)}
             onMouseEnter={() => setCurrentSubMenuName(item.name)}
             onMouseLeave={() => setCurrentSubMenuName(null)}
           >
-            {item.path ? <Link href={item.path} /> : item.name}
+            {item.path ? <Link href={item.path}>{item.name}</Link> : item.name}
             {currentSubMenuName === item.name && item.subItem}
           </li>
         ))}
