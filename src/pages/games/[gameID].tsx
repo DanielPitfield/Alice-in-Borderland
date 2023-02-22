@@ -7,7 +7,7 @@ import { api } from "../../utils/api";
 
 export const getStaticPaths: GetStaticPaths = () => {
   // Paths need to be strings (allow both the game name and the game id)
-  const allPaths: string[] = Games.map((game) => game.name ?? "")
+  const allPaths: string[] = Games.map((game) => game.cardName as string)
     .concat(Games.map((game) => game.id))
     .filter((x) => x);
 
