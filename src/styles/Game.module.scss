@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #797878;
   border-radius: 6px;
-  height: 100vh;
+  min-height: 100vh;
 
   .imageWrapper {
     display: flex;
@@ -16,14 +16,14 @@
     flex-basis: 15em;
     flex-grow: 1;
     flex-shrink: 0;
-    margin: 0 2em;
+    margin-right: 4em;
 
     .titleWrapper {
       display: flex;
 
       .title {
         display: flex;
-        margin: 0.5em 0.3em 0.5em 0;
+        margin: 0.5em 0;
       }
     }
 
@@ -33,13 +33,17 @@
     }
 
     .link {
-      padding: 0.3em;
-      margin: 0 0.1em;
+      padding: 0.2em;
+      margin-left: 0.1em;
     }
 
     .list {
       padding-left: 1.2em;
       margin: 0;
+    }
+
+    .list, .details, .solution {
+      font-size: 0.9em;
     }
   }
 }

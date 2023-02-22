@@ -15,7 +15,6 @@ const GameDescription = (props: GameDescriptionProps) => {
     <>
       {props.description.registration && (
         <>
-          <h3 className={styles.subtitle}>Registration</h3>
           <div>Player Limit: {props.description.registration.playerLimit ?? "None"}</div>
           <div>Time Limit: {props.description.registration.timeLimit ?? "None"}</div>
         </>
@@ -35,14 +34,14 @@ const GameDescription = (props: GameDescriptionProps) => {
       {props.description.details && (
         <>
           <h3 className={styles.subtitle}>Details</h3>
-          <div>{props.description.details}</div>
+          <div className={styles.details}>{props.description.details}</div>
         </>
       )}
 
       {props.description.solution && (
         <>
           <h3 className={styles.subtitle}>Solution</h3>
-          <div>{props.description.solution}</div>
+          <div className={styles.solution}>{props.description.solution}</div>
         </>
       )}
     </>
