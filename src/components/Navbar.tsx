@@ -7,12 +7,14 @@ import SubNavPeople from "./SubNavPeople";
 
 type NavbarItem = {
   name: string;
-  subItem: React.ReactNode;
+  path?: string;
+  subItem?: React.ReactNode;
 };
 
 const items: NavbarItem[] = [
   { name: "Suites", subItem: <SubNavSuites /> },
   { name: "People", subItem: <SubNavPeople /> },
+  { name: "Cards", path: "/cards" },
 ];
 
 const Navbar = () => {
@@ -32,7 +34,7 @@ const Navbar = () => {
             onMouseEnter={() => setCurrentSubMenuName(item.name)}
             onMouseLeave={() => setCurrentSubMenuName(null)}
           >
-            {item.name}
+            {item.path ? <Link href={item.path} /> : item.name}
             {currentSubMenuName === item.name && item.subItem}
           </li>
         ))}
