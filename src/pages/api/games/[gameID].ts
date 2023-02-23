@@ -13,8 +13,8 @@ export type GameData = {
   players: PersonName[];
   // Side characters which participated in the game
   additionalPlayers?: string[];
-  // Face card games have borderland citizens
-  citizens?: PersonName[];
+  // Games (typically face card games) have borderland citizens
+  citizens?: `${string} - ${CardName}`[];
   // How was the game entered, played and solved?
   description?: {
     registration?: {
