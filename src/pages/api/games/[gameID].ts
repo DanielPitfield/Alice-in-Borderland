@@ -12,6 +12,7 @@ export type GameData = {
   // Main characters which participated in the game
   players: PersonName[];
   // Side characters which participated in the game
+  // TODO: Remove additionalPlayers (most of these characters were not in the Netflix adaptation)?
   additionalPlayers?: string[];
   // Games (typically face card games) have borderland citizens
   citizens?: `${string} - ${CardName}`[];
@@ -22,6 +23,8 @@ export type GameData = {
       timeLimit?: string;
     };
     rules?: string[];
+    // TODO: GAME OVER conditions?
+    // TODO: GAME CLEAR conditions?
     details?: string;
     solution?: string;
   };
