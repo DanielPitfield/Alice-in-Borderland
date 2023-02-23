@@ -41,22 +41,19 @@ const GamePlayers = (props: GamePlayersProps) => {
             }
 
             // Does the citizen have a person profile page?
-            const hasPage: boolean = PersonNames.some((personName) =>
+            const pagePath: string | undefined = PersonNames.find((personName) =>
               citizenName.split(" ").some((x) => x === personName)
             );
 
-            // Link to their person profile page (if they have one)
-            if (hasPage) {
-              // TODO: The citizen's name with their card name is not the correct path
-              return (
-                <Link className={styles.link} key={citizen} href={`/people/${citizen}`}>
-                  {citizen}
-                </Link>
-              );
+            if (!pagePath) {
+              return citizen;
             }
 
-            // Otherwise, just show their name
-            return citizen;
+            return (
+              <Link className={styles.link} key={citizen} href={`/people/${pagePath}`}>
+                {citizen}
+              </Link>
+            );
           })}
         </div>
       )}
