@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           </div>
         </aside>
         <div className={styles.imageWrapper}>
-          <Image src={BannerImage} alt="Banner" fill />
+          <Image src={BannerImage} alt="Banner" priority fill />
         </div>
       </section>
     </>
