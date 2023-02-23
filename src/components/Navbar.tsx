@@ -2,20 +2,7 @@ import styles from "../styles/Navbar.module.scss";
 
 import React, { useState } from "react";
 import Link from "next/link";
-import SubNavSuites from "./SubNavSuites";
-import SubNavPeople from "./SubNavPeople";
-
-type NavbarItem = {
-  name: string;
-  path?: string;
-  subItem?: React.ReactNode;
-};
-
-const items: NavbarItem[] = [
-  { name: "Suites", subItem: <SubNavSuites /> },
-  { name: "People", subItem: <SubNavPeople /> },
-  { name: "Cards", path: "/cards" },
-];
+import { NavbarItems } from "../data/NavbarItems";
 
 const Navbar = () => {
   const [currentSubMenuName, setCurrentSubMenuName] = useState<string | null>(null);
@@ -27,7 +14,7 @@ const Navbar = () => {
       </Link>
 
       <ul className={styles.menu}>
-        {items.map((item) => (
+        {NavbarItems.map((item) => (
           <li
             key={item.name}
             className={styles.item}

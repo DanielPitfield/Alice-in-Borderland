@@ -6,7 +6,7 @@ import { CardSuiteMappings } from "../data/Cards/AllCards";
 import type { Size } from "./Card";
 import Link from "next/link";
 
-export interface SuiteProps {
+interface SuiteProps {
   suite: CardSuite;
   size: Size;
 }

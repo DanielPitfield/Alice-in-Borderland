@@ -7,7 +7,7 @@ import Image, { type StaticImageData } from "next/image";
 import PersonHeader from "./PersonHeader";
 import { PersonImageMappings } from "../data/People/PersonImageMappings";
 
-export interface PersonProps {
+interface PersonProps {
   person: PersonData;
 }
 

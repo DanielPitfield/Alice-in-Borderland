@@ -6,7 +6,7 @@ import GameDescription from "./GameDescription";
 import GameHeader from "./GameHeader";
 import GamePlayers from "./GamePlayers";
 
-export interface GameProps {
+interface GameProps {
   game: GameData;
 }
 

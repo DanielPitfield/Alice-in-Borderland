@@ -2,7 +2,7 @@ import styles from "../styles/Game.module.scss";
 
 import type { GameData } from "../pages/api/games/[gameID]";
 
-export interface GameDescriptionProps {
+interface GameDescriptionProps {
   description: GameData["description"];
 }
 

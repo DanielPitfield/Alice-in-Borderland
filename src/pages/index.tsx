@@ -4,12 +4,10 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import BannerImage from "../../public/Images/banner.jpg";
+import SocialMediaButton from "../components/SocialMediaButton";
+import { SocialMediaNames } from "../data/SocialMedia";
 
 const Home: NextPage = () => {
-  // TODO: Add "Watch on Netflix" link below description
-  // TODO: Add "View on IMDB" link below description
-  // TODO: Add "View subreddit" link below description
-
   return (
     <>
       <Head>
@@ -23,6 +21,11 @@ const Home: NextPage = () => {
           <div className={styles.titleWrapper}>
             <h1 className={styles.title}>Alice in Borderland</h1>
             <p className={styles.description}>All the trivia from the hit Netflix adaptation Alice in Borderland!</p>
+            <ul>
+              {SocialMediaNames.map((name) => (
+                <SocialMediaButton key={name} name={name} />
+              ))}
+            </ul>
           </div>
         </aside>
         <div className={styles.imageWrapper}>

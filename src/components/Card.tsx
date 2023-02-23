@@ -8,7 +8,7 @@ import { Games } from "../data/Games/AllGames";
 
 export type Size = "small" | "medium" | "large" | "very large";
 
-export interface CardProps {
+interface CardProps {
   card: CardName;
   size: Size;
   hasLink: boolean;
