@@ -18,6 +18,7 @@ export const PersonNames = [
   "Asahi",
   "Tatta",
   "An",
+  "Kyuma",
 ] as const;
 
 export const People: PersonData[] = [
@@ -205,5 +206,15 @@ export const People: PersonData[] = [
     borderlandCitizenship: "Player",
     gameSpeciality: ["Diamonds"],
     gamesPlayed: ["4 of Diamonds", "10 of Hearts", "Queen of Diamonds", "King of Spades"],
+  },
+  {
+    id: "17",
+    name: "Kyuma",
+    japaneseName: "久間 欣治",
+    gender: "Male",
+    occupation: ["Musician"],
+    borderlandCitizenship: "Citizen",
+    gameSpeciality: ["Clubs"],
+    gamesPlayed: ["3 of Spades", "King of Clubs", "King of Hearts"],
   },
 ];

@@ -55,4 +55,26 @@ export const ClubsGames: GameData[] = [
         "The bus was the GOAL. It had the word GOAL spray painted in graffiti and the dictionary provides a translation for both 'Goal' and 'Runaway' (A victory that is easily obtained). The bus was extremely durable and had a heater, which would've allowed each player to survive the game. In this game, only the ones who didn't ignore an 'injured player' would've cleared it. The biggest giveaway that something was wrong was the difficulty. The fact that the difficulty wasn't Spades and was a low Clubs even with the fairly difficult trials foreshadows at the easy solution.",
     },
   },
+  {
+    id: "10C",
+    cardName: "10 of Clubs",
+    name: "Bingo in Match Factory",
+    players: ["Usagi"],
+    description: {
+      registration: {
+        playerLimit: "None",
+        timeLimit: "None",
+      },
+      rules: [
+        "There are 25 massive rooms total in a 5 x 5 grid. Like in standard bingo, the central space is free",
+        "There is a number in each of the 24 rooms to find, and once the number is found it is added to the bingo card",
+        "Players are given only nine matchsticks each, so they must use them wisely",
+        "It is GAME OVER for the players who have used up all their matches",
+        "If all numbers found complete a row, column, or diagonal on a bingo sheet, it is GAME CLEAR for all surviving players",
+      ],
+      details:
+        "The entire game venue is in complete and utter darkness, so using the matchsticks is completely necessary. If a player burns all nine of their matchsticks, they're lasered.",
+      solution: "",
+    },
+  },
 ];

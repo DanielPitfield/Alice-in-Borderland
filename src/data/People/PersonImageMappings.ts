@@ -17,6 +17,7 @@ import Momoka from "../../../public/Images/Momoka.jpg";
 import Asahi from "../../../public/Images/Asahi.jpg";
 import Tatta from "../../../public/Images/Tatta.jpg";
 import An from "../../../public/Images/An.jpg";
+import Kyuma from "../../../public/Images/Kyuma.jpg";
 
 export const PersonImageMappings: { name: PersonName; image: StaticImageData }[] = [
   { name: "Arisu", image: Arisu },
@@ -35,4 +36,5 @@ export const PersonImageMappings: { name: PersonName; image: StaticImageData }[]
   { name: "Asahi", image: Asahi },
   { name: "Tatta", image: Tatta },
   { name: "An", image: An },
+  { name: "Kyuma", image: Kyuma },
 ];
