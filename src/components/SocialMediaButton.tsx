@@ -14,9 +14,9 @@ const SocialMediaButton = (props: SocialMediaButtonProps) => {
   }
 
   return (
-    <li className={styles.item}>
-      <a className={styles.link} href={mapping.link} target="_blank" rel="noreferrer">
-        <mapping.icon className={styles.icon} />
+    <li className={styles.item} data-name={mapping.name}>
+      <a className={styles.link} data-name={mapping.name} href={mapping.link} target="_blank" rel="noreferrer">
+        <mapping.icon className={styles.icon} data-name={mapping.name} />
         {mapping.text}
       </a>
     </li>
