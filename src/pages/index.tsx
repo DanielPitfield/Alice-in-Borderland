@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           <div className={styles.titleWrapper}>
             <h1 className={styles.title}>Alice in Borderland</h1>
             <p className={styles.description}>All the trivia from the hit Netflix adaptation Alice in Borderland!</p>
-            <ul>
+            <ul className={styles.list}>
               {SocialMediaNames.map((name) => (
                 <SocialMediaButton key={name} name={name} />
               ))}

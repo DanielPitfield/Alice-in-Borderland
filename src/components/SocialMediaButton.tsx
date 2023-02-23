@@ -14,8 +14,10 @@ const SocialMediaButton = (props: SocialMediaButtonProps) => {
   }
 
   return (
-    <li>
-      <a href={mapping.link}>{mapping.text}</a>
+    <li className={styles.item}>
+      <a className={styles.link} href={mapping.link} target="_blank" rel="noreferrer">
+        {mapping.text}
+      </a>
     </li>
   );
 };

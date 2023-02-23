@@ -21,6 +21,35 @@
         margin-bottom: 0;
         font-weight: normal;
       }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: left;
+        padding: 0;
+        margin: 1em 0;
+
+        .item {
+          display: flex;
+          justify-content: center;
+          margin: 0.75em 0;
+          // TODO: Different background colours for the different social media names
+          background-color: blue;
+          border-radius: 8px;
+
+          .link {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            text-decoration: none;
+            // TODO: Different colour for the different social media names
+            color: inherit;
+            padding: 1em 0;
+            margin: 0;
+          }
+        }
+      }
     }
   }
 
