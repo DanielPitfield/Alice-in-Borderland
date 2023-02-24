@@ -74,7 +74,6 @@ export const ClubsGames: GameData[] = [
       ],
       details:
         "The entire game venue is in complete and utter darkness, so using the matchsticks is completely necessary. If a player burns all nine of their matchsticks, they're lasered.",
-      solution: "",
     },
   },
   {
@@ -89,17 +88,17 @@ export const ClubsGames: GameData[] = [
       rules: [
         "Players are allowed to swing and jump onto other ropes",
         "Players are also allowed to kick other players off the ropes",
-        "It is GAME OVER if a player gets kicked off their rope; they will be lasered immediately",
-        "It is GAME OVER if a player fails to hold onto a rope below the the spotlight platform; they will be lasered immediately",
+        "It is GAME OVER if a player gets kicked off their rope",
+        "It is GAME OVER if a player fails to hold onto a rope below the the spotlight platform",
       ],
       details:
         "Inside the auditorium, there are various ropes hanging at different levels of the venue, each at different lengths. Some ropes are hung from the spotlight platform, and others at the ceiling of the building.",
-      solution: "",
     },
   },
   {
     id: "QC",
     cardName: "Queen of Clubs",
+    name: "Target",
     players: ["Kuina", "An"],
     description: {
       registration: {
@@ -107,17 +106,19 @@ export const ClubsGames: GameData[] = [
         timeLimit: "None",
       },
       rules: [
+        "Players must group themselves into pairs",
+        "Each pair occupies a narrow beam in the venue and must throw glowing balls at their opponents to knock them off their beams",
         "It is GAME CLEAR if the players were able to knock off the citizens off their beam",
-        "It is GAME OVER if a player or citizen falls off their own beam; they will be lasered immediately",
+        "It is GAME OVER if a player falls off their own beam",
       ],
-      details:
-        "Players must group themselves into pairs. There are seven beams and in between each is an empty pit below. Each pair occupies a narrow beam in the venue. Players must throw glowing balls at their opponents to knock them off their beams. The game venue takes place inside the Grit & Dirt Removal Chamber within the plant.",
-      solution: "Be the last person/group standing on the beam.",
+      details: "There are seven beams and in between each is an empty pit below.",
+      solution: "Determine who the citizen are and knock them or be the last person/group standing on the beam.",
     },
   },
   {
     id: "KC",
     cardName: "King of Clubs",
+    name: "Osmosis",
     players: ["Arisu", "Kuina", "Usagi", "Niragi", "Tatta"],
     citizens: [
       "Kyuma - King of Clubs",
@@ -131,16 +132,22 @@ export const ClubsGames: GameData[] = [
         playerLimit: 5,
         timeLimit: "2 hours",
       },
-
-      // TODO: Add rules
-      rules: [],
-
-      // TODO: Additional info e.g. base, how to get points
+      rules: [
+        "Each player must equip one of the provided bracelets before entering the venue",
+        "No participant may bring in any weapon or any metallic object to the venue",
+        "Each team starts with 10,000 points in total. Members of each team are free to distribute the points amongst its members as they see fit, with a minimum of 100 points per person. The teams each have their respective bases, which are tall posts with what looks like a plasma globe on the top. The game only begins once all the points have been distributed among the players",
+        "There are three ways to obtain points - Battle, Item, and Base. All points lost or gained affects the team total",
+        "Battle - players must make physical contact with the opponent's body. The bracelet will sense the bioelectricity and initiate the game. The bracelets will reflect the points of the player and the opponent in the battle. The player with the greater number of points is the battle's winner. The loser will automatically transfer 500 points to the winner at the end of the battle. Team members may battle together by keeping physical contact when initiating a battle. There is no limit to the amount of players that can group together to battle and how the points are divided between team members that are connected is not disclosed. After each battle that results in an exchange in points, any further attempts of exchanging points is forbidden. If players accidentally or purposefully engage in a battle with a player in that state, both will be shocked with a high voltage electric current",
+        "Items - There are six random items hidden in containers around the game arena with varying worth in points - 500, 1000, 1500, 2000, 2500 and 3,000. Once an item is found, the player will gain the points tied to the respective item upon physical contact",
+        "Base - The base is a place where an infinite number of points is stored. If a player were to successfully touch the base of the opposing team, they're rewarded with 10000 points. When making contact with one's own base, that player will have an infinite amount of points. In this event, the points transferred will be 10,000 points from the loser to the winner. Once the player breaks contact with their own team's base, their points will resume to what it was prior to contact with the base in addition to points earned whilst in contact",
+        "If a player's points falls below 0, it's GAME OVER for them",
+        "It's GAME CLEAR for the team that has the most points by the end of the time limit",
+        "It's GAME OVER for the team that has the least points by the end of the time limit",
+      ],
       details:
-        "The venue is a massive harbor filled with shipping containers, many of which are stacked on top of each other creating a maze. The goal of the game is to accumulate as many points for the team as possible in the time limit. There are three ways to obtain points - Battle, Item, and Base. All points lost or gained affects the team total.",
-
-      // TODO: Add solution
-      solution: "",
+        "This game is arguably one of the most complex games of the Borderlands in terms of rules and strategy. It was the first to be beaten during the Second Stage, being beaten on the first day of exhibitions, alongside the Queen of Diamonds. This was the only 'Face Card' game shown that is known to feature more than one citizen.",
+      solution:
+        "One crucial detail that is never mentioned in the rules is that it isn't forbidden for players to carry 2 bracelets at a time, and when they do, the points from both bracelets are used in battle. Tatta sacrificed his arm so that Arisu could remove his bracelet and wear both and then trick Kyuma, who had calculated that no single member of Arisu's team had enough points to win a battle by themselves, into taking one last battle.",
     },
   },
 ];
