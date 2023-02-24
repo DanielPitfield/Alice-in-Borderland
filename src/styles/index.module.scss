@@ -54,6 +54,13 @@
           @each $name, $color in $backgroundColours {
             &[data-name="#{$name}"] {
               background-color: $color;
+              transition: background-color 0.1s ease;
+              box-shadow: #0000004d 0px 3px 8px;
+              &:hover {
+                font-weight:bold;
+                background-color: lighten($color, 4%);
+                outline: 3px solid black;
+              }
             }
           }
 
