@@ -49,4 +49,26 @@ export const DiamondsGames: GameData[] = [
         "Chisiya used the Card Counting Theory to win. All players also tried cheating at least once in various forms such as distracting opponents to flip the deck of cards as the dealer, using a reflective object to look at other people's cards, dealing the second card as the dealer not the top card, marking cards or hiding extra cards. A hidden solution would have been to choose one player to win and everybody else cheats so that this chosen player can shoot at the rope around their neck!",
     },
   },
+  {
+    id: "JD",
+    cardName: "Jack of Diamonds",
+    name: "Mahjong",
+    players: ["Chishiya"],
+    citizens: ["Amon Komayama - Jack of Diamonds"],
+    description: {
+      registration: {
+        playerLimit: 3,
+        timeLimit: "None",
+      },
+      rules: [
+        "Standard Mahjong rules apply",
+        "It is GAME CLEAR for the player who has the most points by the end of the game",
+        "It is GAME OVER, for all players who place second or lower (their electric Collar will explode)",
+        "Players may not get up from their chair during the game, there is a trapdoor below their chair",
+      ],
+      details:
+        "While in the manga Chishiya is the winner and sole survivor of the game, in the Netflix adaptation the three players appear to work together to defeat Amon Komayama.",
+      solution: "",
+    },
+  },
 ];
