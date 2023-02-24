@@ -77,4 +77,70 @@ export const ClubsGames: GameData[] = [
       solution: "",
     },
   },
+  {
+    id: "JC",
+    cardName: "Jack of Clubs",
+    players: [],
+    description: {
+      registration: {
+        playerLimit: "None",
+        timeLimit: "None",
+      },
+      rules: [
+        "Players are allowed to swing and jump onto other ropes",
+        "Players are also allowed to kick other players off the ropes",
+        "It is GAME OVER if a player gets kicked off their rope; they will be lasered immediately",
+        "It is GAME OVER if a player fails to hold onto a rope below the the spotlight platform; they will be lasered immediately",
+      ],
+      details:
+        "Inside the auditorium, there are various ropes hanging at different levels of the venue, each at different lengths. Some ropes are hung from the spotlight platform, and others at the ceiling of the building.",
+      solution: "",
+    },
+  },
+  {
+    id: "QC",
+    cardName: "Queen of Clubs",
+    players: ["Kuina", "An"],
+    description: {
+      registration: {
+        playerLimit: 14,
+        timeLimit: "None",
+      },
+      rules: [
+        "It is GAME CLEAR if the players were able to knock off the citizens off their beam",
+        "It is GAME OVER if a player or citizen falls off their own beam; they will be lasered immediately",
+      ],
+      details:
+        "Players must group themselves into pairs. There are seven beams and in between each is an empty pit below. Each pair occupies a narrow beam in the venue. Players must throw glowing balls at their opponents to knock them off their beams. The game venue takes place inside the Grit & Dirt Removal Chamber within the plant.",
+      solution: "Be the last person/group standing on the beam.",
+    },
+  },
+  {
+    id: "KC",
+    cardName: "King of Clubs",
+    players: ["Arisu", "Kuina", "Usagi", "Niragi", "Tatta"],
+    citizens: [
+      "Kyuma - King of Clubs",
+      "Kanzaki - King of Clubs",
+      "Kisaragi - King of Clubs",
+      "Maki - King of Clubs",
+      "Shitara - King of Clubs",
+    ],
+    description: {
+      registration: {
+        playerLimit: 5,
+        timeLimit: "2 hours",
+      },
+
+      // TODO: Add rules
+      rules: [],
+
+      // TODO: Additional info e.g. base, how to get points
+      details:
+        "The venue is a massive harbor filled with shipping containers, many of which are stacked on top of each other creating a maze. The goal of the game is to accumulate as many points for the team as possible in the time limit. There are three ways to obtain points - Battle, Item, and Base. All points lost or gained affects the team total.",
+
+      // TODO: Add solution
+      solution: "",
+    },
+  },
 ];
