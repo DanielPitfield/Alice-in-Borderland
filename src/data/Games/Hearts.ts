@@ -77,16 +77,53 @@ export const HeartsGames: GameData[] = [
   {
     id: "9H",
     cardName: "9 of Hearts",
+    name: "Earth Invasion",
     players: ["Arisu"],
     additionalPlayers: ["Masatsugu Kito", "Himari Horikawa", "Nanase Onoue", "Yuzuru Horikawa", "Naomichi Taiga"],
     description: {
       registration: {
-        playerLimit: "None",
-        timeLimit: "None",
+        playerLimit: 7,
+        timeLimit: "10 minutes per round",
       },
-      rules: [""],
-      details: "",
-      solution: "",
+      rules: [
+        "The game is played in 6 rounds. Upon the time limit, the whole venue will be 'invaded by aliens' each round. In order to survive an alien invasion, the player must hide in a refuge pod before the time limit of that round",
+        "A player who cannot enter a refuge pod will face alien invasion, and it means GAME OVER for that player",
+        "Each pod has a maximum capacity",
+        "In order to gain access to a pod, each player's phone must use up a 'Life' card received from another phone",
+        "Each participant is given a phone which displays 6 Life cards and 1 Death card, along with an avatar of all the other players. A card can be given to an individual by dragging the card icon to their avatar icon. The recipient's phone shows what card they have received receives, but does not show who gave them the card",
+        "Each round a phone can only deal one single Life card. The Death cards are independent from Life cards and can be dealt at any time. Receiving a Death card will nullify one received Life card",
+        "It is GAME CLEAR if players deal all of their cards before the end",
+        "It is GAME OVER for a player if they aren't able to enter a pod in time or enter a pod without a valid life card",
+      ],
+      details:
+        "This is the only game in the Alice in Borderland series to not reward a VISA, and instead reward the freedom to return to the original world instantly.",
+      solution:
+        "There was a body of a previous player shown at the start. The players should have chosen to give the death cards to this player (who is already dead). The capacity of a pod was also increased in each round from 1 player to 3 players, therefore allowing for a GAME CLEAR situation where all players pass, as hinted to by the lines 'This is a game designed for those who wants their loved one to live and will guarantee their survival. In the face of the alien invasion, please protect those you cherish'.",
+    },
+  },
+  {
+    id: "10H",
+    cardName: "10 of Hearts",
+    name: "Witch Hunt",
+    players: ["Arisu", "Usagi", "Tatta", "Kuina", "Niragi", "An", "Aguni", "Chishiya", "Momoka", "Asahi"],
+    additionalPlayers: ["Beach residents"],
+    description: {
+      registration: {
+        playerLimit: 66,
+        timeLimit: "2 hours",
+      },
+      rules: [
+        "Momoka Inoue has been murdered, a 'Witch' stabbed her in the chest with a knife",
+        "The witch who took her life is hiding among the members of the Beach",
+        "The murderer is just a witch in title, it can be a man or a woman",
+        "Should the players find the witch, exact divine judgment, and burn their body along with their wretched soul in the Fire of Judgement, it's GAME CLEAR",
+        "It's GAME OVER if the witch survives for 2 hours",
+        "There is no penalty for throwing an innocent player into the fire",
+      ],
+      details:
+        "It is the only game shown to have changed difficulties. Out of all the numbered games, 'Witch Hunt' was the game shown to have the highest number of participants as well as the highest number of deaths. This was the final numbered game that needed to be cleared to move on to the Second Stage.",
+      solution:
+        "The witch was actually Momoka herself. This was deduced by An after analyzing the fingerprints on the knife, and by Arisu after he realized the true nature of Hearts games.",
     },
   },
 ];
