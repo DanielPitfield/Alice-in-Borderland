@@ -11,6 +11,7 @@ interface GameProps {
 }
 
 const Game = (props: GameProps) => {
+  // TODO: When the info wrapper is very large, the card is not initially/entirely visible because the image wrapper grows to the same size
   return (
     <article className={styles.wrapper}>
       <div className={styles.imageWrapper}>
