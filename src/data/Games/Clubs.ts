@@ -145,7 +145,7 @@ export const ClubsGames: GameData[] = [
         "It's GAME OVER for the team that has the least points by the end of the time limit",
       ],
       details:
-        "This game is arguably one of the most complex games of the Borderlands in terms of rules and strategy. It was the first to be beaten during the Second Stage, being beaten on the first day of exhibitions, alongside the Queen of Diamonds. This was the only 'Face Card' game shown that is known to feature more than one citizen.",
+        "This game is arguably one of the most complex games of the Borderlands in terms of rules and strategy. It was the first to be beaten during the Second Stage, being beaten on the first day of exhibitions, alongside the Queen of Diamonds.",
       solution:
         "One crucial detail that is never mentioned in the rules is that it isn't forbidden for players to carry 2 bracelets at a time, and when they do, the points from both bracelets are used in battle. Tatta sacrificed his arm so that Arisu could remove his bracelet and wear both and then trick Kyuma, who had calculated that no single member of Arisu's team had enough points to win a battle by themselves, into taking one last battle.",
     },
