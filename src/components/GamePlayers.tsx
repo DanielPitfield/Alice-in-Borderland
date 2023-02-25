@@ -51,7 +51,12 @@ const GamePlayers = (props: GamePlayersProps) => {
         </div>
       )}
 
-      {props.additionalPlayers && <div>Additional Players: {props.additionalPlayers.join(", ")}</div>}
+      {props.additionalPlayers && (
+        <div>
+          {props.players.length > 0 ? "Additional Players: " : "Players: "}
+          {props.additionalPlayers.join(", ")}
+        </div>
+      )}
 
       {props.citizens && (
         <div>

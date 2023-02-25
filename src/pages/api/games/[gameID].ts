@@ -23,8 +23,6 @@ export type GameData = {
       timeLimit?: string;
     };
     rules?: string[];
-    // TODO: GAME OVER conditions?
-    // TODO: GAME CLEAR conditions?
     // TODO: Optional isNetflixExclusive property?
     details?: string;
     solution?: string;
