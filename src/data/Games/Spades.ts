@@ -18,7 +18,6 @@ export const SpadesGames: GameData[] = [
       ],
       details:
         "Throughout the journey upwards, the elevator will occasionally stop moving for unspecified amounts of time, thus making the game last much longer than necessary and increasing strain on players' stamina.",
-      solution: "",
     },
   },
   {

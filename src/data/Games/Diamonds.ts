@@ -20,7 +20,6 @@ export const DiamondsGames: GameData[] = [
         "It is GAME CLEAR if players can unanimously answer which switch turns on the light",
         "If the water level rises and the surface of the water touches the high current lines, it's GAME OVER",
       ],
-      details: "",
       solution:
         "The solution is surprisingly simple. Close the door, and flip switch A on for until the water is just a few inch sea from the wires. Turn the switch off, immediately open the door, and flip switch B. If it doesn't turn on, it's not switch B. Then feel the light bulb. If it's hot, the answer is A. If not, then it's C. This can be done in any order with any switch.",
     },
@@ -68,7 +67,6 @@ export const DiamondsGames: GameData[] = [
       ],
       details:
         "While in the manga Chishiya is the winner and sole survivor of the game, in the Netflix adaptation the three players appear to work together to defeat Amon Komayama.",
-      solution: "",
     },
   },
 ];
