@@ -3,7 +3,7 @@ import styles from "../styles/index.module.scss";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import BannerImage from "../../public/Images/banner.jpg";
+import BannerImage from "../../public/Images/Banner.jpg";
 import SocialMediaButton from "../components/SocialMediaButton";
 import { SocialMediaNames } from "../data/SocialMedia";
 
