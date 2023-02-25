@@ -4,6 +4,7 @@ export const HeartsGames: GameData[] = [
   {
     id: "2H",
     cardName: "2 of Hearts",
+    isNetflixExclusive: false,
     players: ["Saori"],
     description: {
       registration: {
@@ -27,6 +28,7 @@ export const HeartsGames: GameData[] = [
     id: "4H",
     cardName: "4 of Hearts",
     name: "Survey",
+    isNetflixExclusive: false,
     players: ["Arisu"],
     additionalPlayers: ["Hayato Dodo"],
     description: {
@@ -54,6 +56,7 @@ export const HeartsGames: GameData[] = [
     id: "7H",
     cardName: "7 of Hearts",
     name: "Hide and Seek",
+    isNetflixExclusive: false,
     players: ["Arisu", "Karube", "Chota", "Saori"],
     description: {
       registration: {
@@ -78,6 +81,7 @@ export const HeartsGames: GameData[] = [
     id: "9H",
     cardName: "9 of Hearts",
     name: "Earth Invasion",
+    isNetflixExclusive: false,
     players: ["Arisu"],
     additionalPlayers: ["Masatsugu Kito", "Himari Horikawa", "Nanase Onoue", "Yuzuru Horikawa", "Naomichi Taiga"],
     description: {
@@ -105,6 +109,7 @@ export const HeartsGames: GameData[] = [
     id: "10H",
     cardName: "10 of Hearts",
     name: "Witch Hunt",
+    isNetflixExclusive: false,
     players: ["Arisu", "Usagi", "Tatta", "Kuina", "Niragi", "An", "Aguni", "Chishiya", "Momoka", "Asahi"],
     additionalPlayers: ["Beach residents"],
     description: {
@@ -130,6 +135,7 @@ export const HeartsGames: GameData[] = [
     id: "JH",
     cardName: "Jack of Hearts",
     name: "Solitary Confinement",
+    isNetflixExclusive: false,
     players: ["Chishiya"],
     additionalPlayers: ["Sunato Banda", "Oki Yaba"],
     citizens: ["Enji Matsushita - Jack of Hearts"],
@@ -156,6 +162,7 @@ export const HeartsGames: GameData[] = [
     id: "QH",
     cardName: "Queen of Hearts",
     name: "Croquet",
+    isNetflixExclusive: false,
     players: ["Arisu", "Usagi"],
     citizens: ["Mira Kano - Queen of Hearts"],
     description: {
@@ -178,6 +185,7 @@ export const HeartsGames: GameData[] = [
   {
     id: "KH",
     cardName: "King of Hearts",
+    isNetflixExclusive: true,
     players: [],
     description: {
       registration: {

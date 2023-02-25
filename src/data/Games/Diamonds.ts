@@ -4,6 +4,7 @@ export const DiamondsGames: GameData[] = [
   {
     id: "4D",
     cardName: "4 of Diamonds",
+    isNetflixExclusive: false,
     players: ["An"],
     additionalPlayers: ["Taketo Serizawa"],
     description: {
@@ -28,6 +29,7 @@ export const DiamondsGames: GameData[] = [
     id: "6D",
     cardName: "6 of Diamonds",
     name: "Blackjack",
+    isNetflixExclusive: false,
     players: ["Chishiya"],
     description: {
       registration: {
@@ -52,6 +54,7 @@ export const DiamondsGames: GameData[] = [
     id: "JD",
     cardName: "Jack of Diamonds",
     name: "Mahjong",
+    isNetflixExclusive: false,
     players: ["Chishiya"],
     citizens: ["Amon Komayama - Jack of Diamonds"],
     description: {
@@ -72,6 +75,7 @@ export const DiamondsGames: GameData[] = [
   {
     id: "QD",
     cardName: "Queen of Diamonds",
+    isNetflixExclusive: true,
     players: [],
     description: {
       details:
@@ -82,6 +86,7 @@ export const DiamondsGames: GameData[] = [
     id: "KD",
     cardName: "King of Diamonds",
     name: "Beauty Contest",
+    isNetflixExclusive: false,
     players: ["Chishiya"],
     additionalPlayers: ["Hinako Daimon", "Takashi Asuma", "Benzo Yashige"],
     citizens: ["Keiichi Kuzuryu - King of Diamonds"],

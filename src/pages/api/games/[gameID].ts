@@ -5,10 +5,12 @@ import type { PersonName } from "../../../data/People/AllPeople";
 
 export type GameData = {
   id: string;
-  // The descriptive name of the game
-  name?: string;
   // The card which is awarded on completion of the game
   cardName: CardName;
+  // The descriptive name of the game
+  name?: string;
+  // Is the game exclusive to the Netflix adaptation?
+  isNetflixExclusive: boolean;
   // Main characters which participated in the game
   players: PersonName[];
   // Side characters which participated in the game
@@ -23,7 +25,6 @@ export type GameData = {
       timeLimit?: string;
     };
     rules?: string[];
-    // TODO: Optional isNetflixExclusive property?
     details?: string;
     solution?: string;
   };

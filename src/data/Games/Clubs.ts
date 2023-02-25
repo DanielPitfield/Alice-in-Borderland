@@ -5,6 +5,7 @@ export const ClubsGames: GameData[] = [
     id: "2C",
     cardName: "2 of Clubs",
     name: "Hunting Competition",
+    isNetflixExclusive: true,
     players: [],
     description: {
       details: "Team-based running and chasing game",
@@ -14,6 +15,7 @@ export const ClubsGames: GameData[] = [
     id: "3C",
     cardName: "3 of Clubs",
     name: "Good Fortune, Bad Fortune",
+    isNetflixExclusive: false,
     players: ["Arisu", "Chota", "Karube", "Saori"],
     description: {
       registration: {
@@ -36,6 +38,7 @@ export const ClubsGames: GameData[] = [
     id: "4C",
     cardName: "4 of Clubs",
     name: "Runaway",
+    isNetflixExclusive: false,
     players: [],
     additionalPlayers: ["Gentle Girl", "Kaito Yamane"],
     citizens: ["Keiichi Kuzuryu - King of Diamonds"],
@@ -59,6 +62,7 @@ export const ClubsGames: GameData[] = [
     id: "10C",
     cardName: "10 of Clubs",
     name: "Bingo in Match Factory",
+    isNetflixExclusive: true,
     players: ["Usagi"],
     description: {
       registration: {
@@ -79,6 +83,7 @@ export const ClubsGames: GameData[] = [
   {
     id: "JC",
     cardName: "Jack of Clubs",
+    isNetflixExclusive: true,
     players: [],
     description: {
       registration: {
@@ -99,6 +104,7 @@ export const ClubsGames: GameData[] = [
     id: "QC",
     cardName: "Queen of Clubs",
     name: "Target",
+    isNetflixExclusive: true,
     players: ["Kuina", "An"],
     description: {
       registration: {
@@ -119,6 +125,7 @@ export const ClubsGames: GameData[] = [
     id: "KC",
     cardName: "King of Clubs",
     name: "Osmosis",
+    isNetflixExclusive: false,
     players: ["Arisu", "Kuina", "Usagi", "Niragi", "Tatta"],
     citizens: [
       "Kyuma - King of Clubs",

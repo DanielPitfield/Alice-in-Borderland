@@ -5,7 +5,8 @@ export const SpadesGames: GameData[] = [
     id: "2S",
     cardName: "2 of Spades",
     name: "Human Elevator",
-    players: ["Usagi"],
+    isNetflixExclusive: true,
+    players: [],
     description: {
       registration: {
         playerLimit: "None",
@@ -24,6 +25,7 @@ export const SpadesGames: GameData[] = [
     id: "3S",
     cardName: "3 of Spades",
     name: "Theme Park",
+    isNetflixExclusive: false,
     players: ["Kyuma"],
     description: {
       registration: {
@@ -44,6 +46,7 @@ export const SpadesGames: GameData[] = [
     id: "5S",
     cardName: "5 of Spades",
     name: "Tag",
+    isNetflixExclusive: false,
     players: ["Arisu", "Karube", "Usagi", "Chishiya"],
     description: {
       registration: {
@@ -67,6 +70,7 @@ export const SpadesGames: GameData[] = [
   {
     id: "6S",
     cardName: "6 of Spades",
+    isNetflixExclusive: false,
     players: ["Aguni", "Niragi"],
     additionalPlayers: ["Takatora Samura ('Last Boss')"],
     description: {
@@ -88,6 +92,7 @@ export const SpadesGames: GameData[] = [
     id: "7S",
     cardName: "7 of Spades",
     name: "Boiling Death",
+    isNetflixExclusive: false,
     players: ["Akane"],
     additionalPlayers: ["Tsuyaruki Hatta"],
     description: {
@@ -110,6 +115,7 @@ export const SpadesGames: GameData[] = [
   {
     id: "JS",
     cardName: "Jack of Spades",
+    isNetflixExclusive: true,
     players: ["Kuina"],
     description: {
       registration: {
@@ -129,6 +135,7 @@ export const SpadesGames: GameData[] = [
     id: "QS",
     cardName: "Queen of Spades",
     name: "Checkmate",
+    isNetflixExclusive: true,
     players: ["Arisu", "Usagi"],
     additionalPlayers: ["Kota"],
     citizens: ["Risa - Queen of Spades"],
@@ -155,6 +162,7 @@ export const SpadesGames: GameData[] = [
     id: "KS",
     cardName: "King of Spades",
     name: "Survival",
+    isNetflixExclusive: false,
     players: ["Arisu", "Usagi", "Kuina", "Akane", "Aguni", "An", "Chishiya", "Niragi"],
     additionalPlayers: ["Every remaining player not currently within another game"],
     citizens: ["Isao Shirabi - King of Spades"],

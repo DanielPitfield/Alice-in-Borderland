@@ -5,6 +5,7 @@ export const SpecialsGames: GameData[] = [
   {
     id: "J",
     cardName: "Joker",
+    isNetflixExclusive: false,
     players: PersonNames.slice(),
     description: {
       registration: {
