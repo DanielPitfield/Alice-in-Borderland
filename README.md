@@ -7,7 +7,7 @@ Website for everything Alice in Borderland including profile pages for all the m
 ![tRPC](https://img.shields.io/badge/tRPC-%23007ACC.svg?style=for-the-badge)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-![Alice in Borderland Dashboard](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/f1Dashboard.png)
+![Alice in Borderland Dashboard](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/aliceInBorderlandDashboard.png)
 
 ## Usage / Instructions
 ### Home
