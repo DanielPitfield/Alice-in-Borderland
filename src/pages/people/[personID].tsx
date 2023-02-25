@@ -4,6 +4,7 @@ import Person from "../../components/Person";
 import { People, PersonNames } from "../../data/People/AllPeople";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
+import superjson from "superjson";
 
 export const getStaticPaths: GetStaticPaths = () => {
   // Paths need to be strings (allow both the person name and their id)
@@ -23,6 +24,7 @@ export async function getStaticProps(context: GetStaticPropsContext<{ personID: 
   const ssg = createProxySSGHelpers({
     router: appRouter,
     ctx: {},
+    transformer: superjson,
   });
 
   const personID = context.params?.personID as string;

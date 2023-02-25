@@ -4,6 +4,7 @@ import Game from "../../components/Game";
 import { Games } from "../../data/Games/AllGames";
 import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
+import superjson from "superjson";
 
 export const getStaticPaths: GetStaticPaths = () => {
   // Paths need to be strings (allow both the game name and the game id)
@@ -25,6 +26,7 @@ export async function getStaticProps(context: GetStaticPropsContext<{ gameID: st
   const ssg = createProxySSGHelpers({
     router: appRouter,
     ctx: {},
+    transformer: superjson,
   });
 
   const gameID = context.params?.gameID as string;
