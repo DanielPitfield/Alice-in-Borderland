@@ -126,4 +126,71 @@ export const HeartsGames: GameData[] = [
         "The witch was actually Momoka herself. This was deduced by An after analyzing the fingerprints on the knife, and by Arisu after he realized the true nature of Hearts games.",
     },
   },
+  {
+    id: "JH",
+    cardName: "Jack of Hearts",
+    name: "Solitary Confinement",
+    players: ["Chishiya"],
+    additionalPlayers: ["Sunato Banda", "Oki Yaba"],
+    citizens: ["Enji Matsushita - Jack of Hearts"],
+    description: {
+      registration: {
+        playerLimit: 20,
+        timeLimit: "1 hour per round",
+      },
+      rules: [
+        "Players must equip an explosive collar upon entry. Before the game begins, a mark (of a card suite) appears behind each player's collar, renditioning everyone unable to see their own mark (Spades, Diamonds, Clubs or Hearts)",
+        "Players are not allowed to look at their mark using any reflective surfaces or materials",
+        "Players are however free to talk amongst themselves during each round",
+        "In the final 5 minutes, all players must enter a cell and announce the mark that they think is on the back of their collar. If they're correct, they move onto the next round. Their mark changes, and the cycle repeats (a new round starts). If the player remains silent or says the wrong mark, it is GAME OVER (their collar explodes)",
+        "Among the players is the Jack of Hearts. When the Jack of Hearts dies, the remaining players all survive and it is GAME CLEAR",
+        "If only two players remain (Jack of Hearts included), only the Jack of Hearts will live, since their identity will become apparent",
+      ],
+      details:
+        "In the prison, there are no reflective surfaces and it is so large and spacious, it is subtly encouraged for players to have discrete conversations discussing strategies. Half a year's supply of food was provided, suggesting the game is a game of attrition.",
+      solution:
+        "The Jack of Hearts' identity was deduced by both Sunato Banda and Oki Yaba after they formed a sudden but strong alliance and trusted each other to see that the only other remaining player was the Jack of Hearts.",
+    },
+  },
+  {
+    id: "QH",
+    cardName: "Queen of Hearts",
+    name: "Croquet",
+    players: ["Arisu", "Usagi"],
+    citizens: ["Mira Kano - Queen of Hearts"],
+    description: {
+      registration: {
+        playerLimit: "None",
+        timeLimit: "None",
+      },
+      rules: [
+        "Standard Croquet rules apply",
+        "There are no restrictions on bring in external weapons or tools",
+        "If the players simply complete 3 sets of croquet, it's GAME CLEAR",
+        "If the players retire or give up, it's GAME OVER",
+      ],
+      details:
+        "The rules allow for a loophole which Mira attempts to exploit, should she get the players to kill her, the game wouldn't be cleared nor over, leading to it being unclearable and all remaining players having no choice but to wait for their visa to expire. This is why weapons were allowed. The Queen of Hearts and the game of Croquet were both based off of Alice in Wonderland. This was the final game to be completed.",
+      solution:
+        "The game at first glance appears very easy but what made the game difficult was how Arisu's desire to find the answer to why he ended up in the Borderlands being exploited by Mira. Using tea that was drugged with a powerful hallucinogen, Mira almost killed both Arisu and Usagi. Arisu should've quickly understood how dangerous Mira could be and stopped his pursuit of the answer. Mira herself is the biggest threat in this game but she could've been completely and easily ignored by simply finishing all 3 sets of Croquet without talking to her.",
+    },
+  },
+  {
+    id: "KH",
+    cardName: "King of Hearts",
+    players: [],
+    description: {
+      registration: {
+        playerLimit: "None",
+        timeLimit: "None",
+      },
+      rules: [
+        "Evade the beast",
+        "It is GAME OVER if the beast catches you",
+        "It is GAME CLEAR if you escape the venue",
+      ],
+      details:
+        "The game venue is very dark, with only a few lights illuminating the tight corridors of a labyringth/maze. The beast roams around the venue and is said to roar lke a tiger or bear.",
+    },
+  },
 ];
