@@ -92,7 +92,7 @@ export const ClubsGames: GameData[] = [
         "It is GAME OVER if a player fails to hold onto a rope below the the spotlight platform",
       ],
       details:
-        "Inside the auditorium, there are various ropes hanging at different levels of the venue, each at different lengths. Some ropes are hung from the spotlight platform, and others at the ceiling of the building.",
+        "This game takes place in the same building as the Jack of Spades game. Inside the building, there are various ropes hanging at different levels of the venue, each at different lengths. Some ropes are hung from the spotlight platform, and others at the ceiling of the building.",
     },
   },
   {
