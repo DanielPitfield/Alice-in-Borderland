@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons/lib";
 
-import { RiNetflixFill } from "react-icons/Ri";
+import { RiNetflixFill } from "react-icons/ri";
 import { FaImdb } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
 
