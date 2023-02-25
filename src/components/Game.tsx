@@ -19,7 +19,11 @@ const Game = (props: GameProps) => {
       </div>
 
       <div className={styles.info}>
-        <GameHeader cardName={props.game.cardName} name={props.game.name} />
+        <GameHeader
+          cardName={props.game.cardName}
+          name={props.game.name}
+          isNetflixExclusive={props.game.isNetflixExclusive}
+        />
         <GamePlayers
           players={props.game.players}
           additionalPlayers={props.game.additionalPlayers}

@@ -5,6 +5,7 @@ import type { GameData } from "../pages/api/games/[gameID]";
 interface GameHeaderProps {
   cardName: GameData["cardName"];
   name: GameData["name"];
+  isNetflixExclusive: GameData["isNetflixExclusive"];
 }
 
 const GameHeader = (props: GameHeaderProps) => {
@@ -13,6 +14,7 @@ const GameHeader = (props: GameHeaderProps) => {
   return (
     <div className={styles.titleWrapper}>
       <h1 className={styles.title}>{titleText}</h1>
+      {props.isNetflixExclusive && <div className={styles.status}>Netflix Exclusive</div>}
     </div>
   );
 };
