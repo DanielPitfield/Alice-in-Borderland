@@ -31,12 +31,13 @@ export const SpadesGames: GameData[] = [
         timeLimit: "None",
       },
       rules: [
-        "It is GAME CLEAR if the players can reach the exit without getting caught by the mascots",
+        "It is GAME CLEAR if the players can reach the exit without getting caught or killed by the mascots (who are armed with crossbows)",
         "It is GAME OVER if the mascots kill all players",
       ],
-      details: "Each mascot is armed with a crossbow.",
+      details:
+        "This game is the only numbered card game known to have taken place in a previous immigration period (before Arisu's arrival in the Borderlands).",
       solution:
-        "To divert attention away from his hiding injured friend, Kisaragi, who was about to be found by a mascot, Kyūma screamed a taunt at the top of his lungs. Using the distraction, he carried her to the exit where the other 3 were waiting, and they all cleared the game.",
+        "To divert attention away from his hiding injured friend, Kisaragi, who was about to be found by a mascot, Kyuma screamed a taunt at the top of his lungs. Using the distraction, he carried her to the exit where the other 3 were waiting, and they all cleared the game.",
     },
   },
   {
