@@ -11,14 +11,12 @@ Website for everything Alice in Borderland including profile pages for all the m
 
 ## Usage / Instructions
 ### Home
-The main landing page provides links to wtach on Netflix, the program's listing on IMDb and the relevant subreddit.
+The main landing page provides links to watch on Netflix, the program's listing on IMDb and the relevant subreddit.
 
 ### Navbar
 * **Suites** (shows the cards that belong to each suite)
 * **People** (every main character showing background information and the card games they played)
 * **Cards** (shows the entire deck of cards which all link to information for the games associated with the cards)
-
-**Throughout the website, navigational links (outside of the navbar) are highlighted in blue.**
 
 ## Acknowledgments
 [Alice in Borderland Wiki](https://aliceinborderland.fandom.com/wiki/Alice_in_Borderland_Wiki)
