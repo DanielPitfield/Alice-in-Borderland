@@ -179,7 +179,7 @@ export const SpadesGames: GameData[] = [
       details:
         "Out of all the games in the Borderlands, the King of Spades game had the most number of players and the highest death count.",
       solution:
-        "Akane destroyed the King of Spades' tracker in order to lure him into an explosive trap, devised by Arisu, within the tight confines of a shop. Open entering the shop, Aguni charges at the King of Spades whilst he is offguard and despite being sprayed by bullets was able to push the King of Spades within the blast radius of the explosion and out the window of the shop. Aguni then finished him off or put him out of his misery caused by his injuries (that had been inflicted from the explosion).",
+        "Akane destroyed the King of Spades' tracker in order to lure him into an explosive trap, devised by Arisu, within the tight confines of a shop. Upon entering the shop, Aguni charges at the King of Spades whilst he is offguard and despite being sprayed by bullets was able to push the King of Spades within the blast radius of the explosion and out the window of the shop. Aguni then finished him off or put him out of his misery caused by his injuries (that had been inflicted from the explosion).",
     },
   },
 ];
