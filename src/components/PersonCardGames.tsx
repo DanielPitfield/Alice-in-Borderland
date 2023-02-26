@@ -10,7 +10,7 @@ interface PersonCardGamesProps {
 const PersonCardGames = (props: PersonCardGamesProps) => {
   return (
     <>
-      <h3>Games Played</h3>
+      <h3 className={styles.subtitle}>Games Played</h3>
       <div className={styles.cardWrapper} data-align={"left"}>
         {props.gamesPlayed.length > 0
           ? props.gamesPlayed.map((game) => <Card key={game} card={game} size={"medium"} hasLink />)
