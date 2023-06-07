@@ -2,7 +2,7 @@ import type { StaticImageData } from "next/image";
 import type { PersonName } from "./AllPeople";
 
 import Arisu from "../../../public/Images/Arisu.jpg";
-import Usagi from "../../../public/Images/Usagi.gif";
+import Usagi from "../../../public/Images/Usagi.jpg";
 import Kuina from "../../../public/Images/Kuina.jpg";
 import Chishiya from "../../../public/Images/Chishiya.jpg";
 import Aguni from "../../../public/Images/Aguni.jpg";
