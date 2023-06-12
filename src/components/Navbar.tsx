@@ -22,7 +22,13 @@ const Navbar = () => {
             onMouseEnter={() => setCurrentSubMenuName(item.name)}
             onMouseLeave={() => setCurrentSubMenuName(null)}
           >
-            {item.path ? <Link href={item.path}>{item.name}</Link> : item.name}
+            {item.path ? (
+              <Link href={item.path} data-has-path={Boolean(item.path)}>
+                {item.name}
+              </Link>
+            ) : (
+              item.name
+            )}
             {currentSubMenuName === item.name && item.subItem}
           </li>
         ))}
