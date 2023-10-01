@@ -14,9 +14,9 @@
     "@trpc/next": "^10.9.0",
     "@trpc/react-query": "^10.9.0",
     "@trpc/server": "^10.9.0",
-    "next": "^13.4.7",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "sass": "^1.63.6",
     "superjson": "^1.12.4",
@@ -29,7 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.44.0",
-    "eslint-config-next": "^13.4.7",
+    "eslint-config-next": "^13.5.3",
     "typescript": "^5.1.6"
   },
   "ct3aMetadata": {

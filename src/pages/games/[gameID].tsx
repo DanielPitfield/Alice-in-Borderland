@@ -1,10 +1,7 @@
-import { createProxySSGHelpers } from "@trpc/react-query/ssg";
 import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Game from "../../components/Game";
 import { Games } from "../../data/Games/AllGames";
-import { appRouter } from "../../server/api/root";
 import { api } from "../../utils/api";
-import superjson from "superjson";
 
 export const getStaticPaths: GetStaticPaths = () => {
   // Paths need to be strings (allow both the game name and the game id)
@@ -22,23 +19,13 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export async function getStaticProps(context: GetStaticPropsContext<{ gameID: string }>) {
-  const ssg = createProxySSGHelpers({
-    router: appRouter,
-    ctx: {},
-    transformer: superjson,
-  });
-
+export function getStaticProps(context: GetStaticPropsContext<{ gameID: string }>) {
   const gameID = context.params?.gameID as string;
-
-  await ssg.games.getInfo.prefetch({ gameID });
 
   return {
     props: {
-      trpcState: ssg.dehydrate(),
       gameID,
     },
-    revalidate: 1,
   };
 }
 

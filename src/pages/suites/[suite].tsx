@@ -31,7 +31,6 @@ export function getStaticProps(context: GetStaticPropsContext<{ suite: CardSuite
       suite,
       description,
     },
-    revalidate: 1,
   };
 }
 
