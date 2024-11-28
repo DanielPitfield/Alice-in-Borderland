@@ -1,6 +1,6 @@
 import styles from "../styles/Game.module.scss";
 
-import type { GameData } from "../pages/api/games/[gameID]";
+import type { GameData } from "../app/api/games/[gameID]/route";
 
 interface GameDescriptionProps {
   description: GameData["description"];

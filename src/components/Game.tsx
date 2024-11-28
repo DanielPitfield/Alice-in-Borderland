@@ -1,6 +1,6 @@
 import styles from "../styles/Game.module.scss";
 
-import type { GameData } from "../pages/api/games/[gameID]";
+import type { GameData } from "../app/api/games/[gameID]/route";
 import Card from "./Card";
 import GameDescription from "./GameDescription";
 import GameHeader from "./GameHeader";
@@ -10,7 +10,7 @@ interface GameProps {
   game: GameData;
 }
 
-const Game = (props: GameProps) => {
+export function Game(props: GameProps) {
   // TODO: When the info wrapper is very large, the card is not initially/entirely visible because the image wrapper grows to the same size
   return (
     <article className={styles.wrapper}>
@@ -24,15 +24,15 @@ const Game = (props: GameProps) => {
           name={props.game.name}
           isNetflixExclusive={props.game.isNetflixExclusive}
         />
+
         <GamePlayers
           players={props.game.players}
           additionalPlayers={props.game.additionalPlayers}
           citizens={props.game.citizens}
         />
+
         <GameDescription description={props.game.description} />
       </div>
     </article>
   );
-};
-
-export default Game;
+}

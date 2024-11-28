@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import type { CardName } from "../../../data/Cards/AllCards";
-import { Games } from "../../../data/Games/AllGames";
-import type { PersonName } from "../../../data/People/AllPeople";
+import type { CardName } from "../../../../data/Cards/AllCards";
+import type { PersonName } from "../../../../data/People/AllPeople";
+import { Games } from "../../../../data/Games/AllGames";
+import { NextResponse } from "next/server";
 
 export type GameData = {
   id: string;
@@ -30,19 +30,17 @@ export type GameData = {
   };
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<GameData | { message: string }>) {
+export async function GET(request: Request, { params }: { params: { gameID: string } }) {
   const game: GameData | undefined = Games.find(
     (game) =>
-      game.id === (req.query.gameID as string) ||
-      game.cardName.toLowerCase() === (req.query.gameID as string).toLowerCase() ||
-      game.name?.toLowerCase() === (req.query.gameID as string).toLowerCase()
+      game.id === params.gameID ||
+      game.cardName.toLowerCase() === params.gameID.toLowerCase() ||
+      game.name?.toLowerCase() === params.gameID.toLowerCase()
   );
 
   if (game) {
-    return res.status(200).json(game);
+    return NextResponse.json(game, { status: 200 });
   }
 
-  return res.status(404).json({
-    message: `User with id: ${req.query.gameID as string} not found.`,
-  });
+  return NextResponse.json({ message: `Game with id: ${params.gameID} not found.` }, { status: 404 });
 }

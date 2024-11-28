@@ -1,7 +1,7 @@
 import styles from "../styles/Card.module.scss";
 
 import Card from "./Card";
-import type { PersonData } from "../pages/api/people/[personID]";
+import type { PersonData } from "../app/api/people/[personID]/route";
 
 interface PersonCardGamesProps {
   gamesPlayed: PersonData["gamesPlayed"];
