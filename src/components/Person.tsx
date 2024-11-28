@@ -11,7 +11,7 @@ interface PersonProps {
   person: PersonData;
 }
 
-const Person = (props: PersonProps) => {
+export function Person(props: PersonProps) {
   const image: StaticImageData | undefined = PersonImageMappings.find((x) => x.name === props.person.name)?.image;
 
   return (
@@ -26,15 +26,15 @@ const Person = (props: PersonProps) => {
           japaneseName={props.person.japaneseName}
           gameSpeciality={props.person.gameSpeciality}
         />
+
         <PersonFacts
           gender={props.person.gender}
           occupation={props.person.occupation}
           borderlandCitizenship={props.person.borderlandCitizenship}
         />
+
         <PersonCardGames gamesPlayed={props.person.gamesPlayed} />
       </div>
     </article>
   );
-};
-
-export default Person;
+}

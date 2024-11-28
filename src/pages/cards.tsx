@@ -2,7 +2,7 @@ import styles from "../styles/CardWall.module.scss";
 
 import CardWall from "../components/CardWall";
 
-export default function CardWallPage() {
+export default async function Page() {
   return (
     <section className={styles.wrapper}>
       <CardWall />

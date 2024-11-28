@@ -1,63 +1,43 @@
 import styles from "../../styles/Card.module.scss";
 
-import type { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import Card from "../../components/Card";
-import { type CardName, CardSuites, CardRanks, CardSuiteMappings, type CardSuite } from "../../data/Cards/AllCards";
+import { type CardName, CardSuites, CardRanks, CardSuiteMappings } from "../../data/Cards/AllCards";
 
-export const getStaticPaths: GetStaticPaths = () => {
-  // Paths need to be strings (and also add the Joker!)
-  const allCardSuites: string[] = CardSuites.map((suite) => suite as string).concat("Joker");
-
-  return {
-    paths: allCardSuites.map((suite) => ({
-      params: {
-        suite,
-      },
-    })),
-    fallback: false,
+interface PageProps {
+  params: {
+    suite: string;
   };
-};
+}
 
-export function getStaticProps(context: GetStaticPropsContext<{ suite: CardSuite | "Joker" }>) {
-  const suiteParam = context.params?.suite as string;
+export default async function Page(props: PageProps) {
+  const suite = props.params.suite;
 
-  const suite = suiteParam as CardSuite | "Joker";
   const description: string | undefined = CardSuiteMappings.find(
     (x) => x.suite.toLowerCase() === suite.toLowerCase()
   )?.description;
 
-  return {
-    props: {
-      suite,
-      description,
-    },
-    revalidate: 1,
-  };
-}
-
-export default function SuitePage(props: InferGetStaticPropsType<typeof getStaticProps>) {
-  if (!props.suite) {
+  if (!suite) {
     return null;
   }
 
   // Dynamic segment is not one of the four card suites (or Joker)
-  if (!CardSuites.some((suite) => suite === props.suite) && props.suite !== "Joker") {
+  if (!CardSuites.some((suite) => suite === suite) && suite !== "Joker") {
     return null;
   }
 
   // Every CardName of the suite
   const allCards: CardName[] =
-    props.suite === "Joker"
+    suite === "Joker"
       ? ["Joker"]
       : CardRanks.map((rank) => {
-          return `${rank} of ${props.suite}` as CardName;
+          return `${rank} of ${suite}` as CardName;
         });
 
   return (
     <>
       <div className={styles.titleWrapper}>
-        <h1 className={styles.title}>{props.suite}</h1>
-        {props.description && <h3 className={styles.subtitle}>{props.description}</h3>}
+        <h1 className={styles.title}>{suite}</h1>
+        {description && <h3 className={styles.subtitle}>{description}</h3>}
       </div>
 
       <div className={styles.cardWrapper}>
