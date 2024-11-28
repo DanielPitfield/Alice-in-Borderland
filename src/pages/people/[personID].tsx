@@ -5,7 +5,7 @@ import { type PersonData } from "../api/people/[personID]";
 interface PageProps {
   params: {
     personID: string;
-  };
+  }
 }
 
 export default async function Page(props: PageProps) {

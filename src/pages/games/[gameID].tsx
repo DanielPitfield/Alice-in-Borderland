@@ -5,7 +5,7 @@ import { type GameData } from "../api/games/[gameID]";
 interface PageProps {
   params: {
     gameID: string;
-  };
+  }
 }
 
 export default async function Page(props: PageProps) {
