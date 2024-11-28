@@ -1,6 +1,6 @@
 import styles from "../styles/Game.module.scss";
 
-import type { GameData } from "../pages/api/games/[gameID]";
+import type { GameData } from "../app/api/games/[gameID]";
 import Link from "next/link";
 import { PersonNames } from "../data/People/AllPeople";
 import type { CardName } from "../data/Cards/AllCards";

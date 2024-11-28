@@ -1,7 +1,7 @@
 import styles from "../styles/Card.module.scss";
 
 import Suite from "./Suite";
-import type { PersonData } from "../pages/api/people/[personID]";
+import type { PersonData } from "../app/api/people/[personID]";
 
 interface PersonCardSpecialityProps {
   gameSpeciality: PersonData["gameSpeciality"];

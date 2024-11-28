@@ -1,6 +1,6 @@
-import { Game } from "../../components/Game";
-import { getBaseURL } from "../../utils/getBaseURL";
-import { type GameData } from "../api/games/[gameID]";
+import { Game } from "../../../components/Game";
+import { getBaseURL } from "../../../utils/getBaseURL";
+import { type GameData } from "../../api/games/[gameID]";
 
 interface PageProps {
   params: {

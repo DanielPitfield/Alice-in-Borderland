@@ -1,6 +1,6 @@
 import styles from "../styles/Person.module.scss";
 
-import type { PersonData } from "../pages/api/people/[personID]";
+import type { PersonData } from "../app/api/people/[personID]";
 import PersonFacts from "./PersonFacts";
 import PersonCardGames from "./PersonCardGames";
 import Image, { type StaticImageData } from "next/image";

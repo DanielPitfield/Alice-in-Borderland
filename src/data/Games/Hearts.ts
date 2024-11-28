@@ -1,4 +1,4 @@
-import type { GameData } from "../../pages/api/games/[gameID]";
+import type { GameData } from "../../app/api/games/[gameID]";
 
 export const HeartsGames: GameData[] = [
   {
