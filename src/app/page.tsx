@@ -27,7 +27,7 @@ export default async function Page() {
             </ul>
           </div>
         </aside>
-        
+
         <div className={styles.imageWrapper}>
           <Image src={BannerImage} alt="Banner" priority fill />
         </div>
