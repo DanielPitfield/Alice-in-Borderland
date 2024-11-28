@@ -1,4 +1,4 @@
-import styles from "../../styles/Card.module.scss";
+import styles from "../../../styles/Card.module.scss";
 
 import Card from "../../../components/Card";
 import { type CardName, CardSuites, CardRanks, CardSuiteMappings } from "../../../data/Cards/AllCards";

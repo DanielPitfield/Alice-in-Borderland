@@ -1,4 +1,4 @@
-import styles from "../styles/CardWall.module.scss";
+import styles from "../../styles/CardWall.module.scss";
 
 import CardWall from "../../components/CardWall";
 
