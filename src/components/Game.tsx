@@ -1,6 +1,6 @@
 import styles from "../styles/Game.module.scss";
 
-import type { GameData } from "../app/api/games/[gameID]";
+import type { GameData } from "../app/api/games/[gameID]/route";
 import Card from "./Card";
 import GameDescription from "./GameDescription";
 import GameHeader from "./GameHeader";

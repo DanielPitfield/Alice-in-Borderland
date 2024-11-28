@@ -1,6 +1,6 @@
 import styles from "../styles/Person.module.scss";
 
-import type { PersonData } from "../app/api/people/[personID]";
+import type { PersonData } from "../app/api/people/[personID]/route";
 
 interface PersonFactsProps {
   gender: PersonData["gender"];

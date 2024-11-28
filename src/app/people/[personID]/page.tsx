@@ -1,11 +1,11 @@
 import { Person } from "../../../components/Person";
 import { getBaseURL } from "../../../utils/getBaseURL";
-import { type PersonData } from "../../api/people/[personID]";
+import { type PersonData } from "../../api/people/[personID]/route";
 
 interface PageProps {
   params: {
     personID: string;
-  }
+  };
 }
 
 export default async function Page(props: PageProps) {

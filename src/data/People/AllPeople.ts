@@ -1,6 +1,6 @@
-import type { PersonData } from "../../app/api/people/[personID]";
+import type { PersonData } from "../../app/api/people/[personID]/route";
 
-export type PersonName = typeof PersonNames[number];
+export type PersonName = (typeof PersonNames)[number];
 export const PersonNames = [
   "Arisu",
   "Usagi",

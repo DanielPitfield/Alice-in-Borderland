@@ -1,11 +1,11 @@
 import { Game } from "../../../components/Game";
 import { getBaseURL } from "../../../utils/getBaseURL";
-import { type GameData } from "../../api/games/[gameID]";
+import { type GameData } from "../../api/games/[gameID]/route";
 
 interface PageProps {
   params: {
     gameID: string;
-  }
+  };
 }
 
 export default async function Page(props: PageProps) {
