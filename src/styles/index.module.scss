@@ -1,6 +1,6 @@
 @use "sass:map";
 
-.wrapper {
+.container {
   display: flex;
   min-height: calc(100vh - 69px);
 
@@ -8,17 +8,13 @@
     display: flex;
     flex-basis: 25.5vw;
     background-color: #222;
-    //align-items: center;
 
-    .titleWrapper {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 3em 2em;
       color: white;
-      text-align: left;
-
-      .title {
-        margin: 0;
-        font-size: 3.5em;
-      }
 
       .description {
         margin-bottom: 0;
@@ -29,7 +25,6 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        align-items: left;
         padding: 0;
         margin: 1em 0;
 
@@ -57,7 +52,7 @@
               transition: background-color 0.1s ease;
               box-shadow: #0000004d 0px 3px 8px;
               &:hover {
-                font-weight:bold;
+                font-weight: bold;
                 background-color: lighten($color, 4%);
                 outline: 3px solid black;
               }

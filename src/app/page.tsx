@@ -15,11 +15,11 @@ export default async function Page() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.wrapper}>
+      <section className={styles.container}>
         <aside className={styles.navigation}>
-          <div className={styles.titleWrapper}>
-            <h1 className={styles.title}>Alice in Borderland</h1>
+          <div className={styles.wrapper}>
             <p className={styles.description}>All the trivia from the hit Netflix adaptation Alice in Borderland!</p>
+
             <ul className={styles.list}>
               {SocialMediaNames.map((name) => (
                 <SocialMediaButton key={name} name={name} />
@@ -27,6 +27,7 @@ export default async function Page() {
             </ul>
           </div>
         </aside>
+        
         <div className={styles.imageWrapper}>
           <Image src={BannerImage} alt="Banner" priority fill />
         </div>
