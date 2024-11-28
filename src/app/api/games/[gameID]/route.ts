@@ -30,7 +30,9 @@ export type GameData = {
   };
 };
 
-export async function GET(request: Request, { params }: { params: { gameID: string } }) {
+export async function GET(request: Request, props: { params: Promise<{ gameID: string }> }) {
+  const params = await props.params;
+
   const game: GameData | undefined = Games.find(
     (game) =>
       game.id === params.gameID ||

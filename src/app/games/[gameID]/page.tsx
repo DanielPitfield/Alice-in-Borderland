@@ -3,13 +3,14 @@ import { getBaseURL } from "../../../utils/getBaseURL";
 import { type GameData } from "../../api/games/[gameID]/route";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     gameID: string;
-  };
+  }>;
 }
 
 export default async function Page(props: PageProps) {
-  const game = await retrieveGame(props.params.gameID);
+  const gameID = (await props.params).gameID;
+  const game = await retrieveGame(gameID);
 
   if (!game) {
     return;
