@@ -4,13 +4,13 @@ import Card from "../../../components/Card";
 import { type CardName, CardSuites, CardRanks, CardSuiteMappings } from "../../../data/Cards/AllCards";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     suite: string;
-  };
+  }>;
 }
 
 export default async function Page(props: PageProps) {
-  const suite = props.params.suite;
+  const suite = (await props.params).suite;
 
   const description: string | undefined = CardSuiteMappings.find(
     (x) => x.suite.toLowerCase() === suite.toLowerCase()

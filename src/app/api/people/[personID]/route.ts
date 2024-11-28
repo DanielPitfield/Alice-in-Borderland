@@ -13,7 +13,9 @@ export type PersonData = {
   gamesPlayed: CardName[];
 };
 
-export async function GET(request: Request, { params }: { params: { personID: string } }) {
+export async function GET(request: Request, props: { params: Promise<{ personID: string }> }) {
+  const params = await props.params;
+
   const person: PersonData | undefined = People.find(
     (person) =>
       person.id === params.personID ||
