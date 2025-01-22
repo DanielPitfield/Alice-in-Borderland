@@ -6,16 +6,7 @@ Website for everything Alice in Borderland including profile pages for all the m
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-![Alice in Borderland Dashboard](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/aliceInBorderlandDashboard.png)
-
-## Usage / Instructions
-### Home
-The main landing page provides links to watch on Netflix, the program's listing on IMDb and the relevant subreddit.
-
-### Navbar
-* **Suites** (shows the cards that belong to each suite)
-* **People** (every main character showing background information and the card games they played)
-* **Cards** (shows the entire deck of cards which all link to information for the games associated with the cards)
+![Alice in Borderland Dashboard](https://pitsy.dev/Images/Projects/aliceInBorderlandDashboard.png)
 
 ## Acknowledgments
 [Alice in Borderland Wiki](https://aliceinborderland.fandom.com/wiki/Alice_in_Borderland_Wiki)
