@@ -3,88 +3,45 @@
 
 .container {
   display: flex;
-  min-height: calc(100vh - 69px);
+  height: calc(100vh - 69px);
 
   .navigation {
     display: flex;
-    flex-basis: 25.5vw;
+    flex-basis: 30vw;
     background-color: #222;
 
     .wrapper {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      padding: 3em 2em;
+      padding: 1em;
       color: white;
 
-      .description {
-        margin-bottom: 0;
-        font-weight: normal;
-      }
-
-      .list {
+      .panel {
         display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 0;
-        margin: 1em 0;
+        height: 100%;
+        padding: 0.5em;
+        margin: 1em;
 
-        $backgroundColours: (
-          "Netflix": black,
-          "IMDb": #f6c700,
-          "Reddit": #fe4502,
-        );
-
-        $fontColours: (
-          "Netflix": #e50914,
-          "IMDb": black,
-          "Reddit": white,
-        );
-
-        .item {
+        ul {
           display: flex;
-          justify-content: center;
-          margin: 0.75em 0;
-          border-radius: 8px;
+          flex-direction: column;
+          flex-wrap: wrap;
+          list-style: none;
+          padding: 0;
+          margin: 0;
 
-          @each $name, $color in $backgroundColours {
-            &[data-name="#{$name}"] {
-              background-color: $color;
-              transition: background-color 0.1s ease;
-              box-shadow: #0000004d 0px 3px 8px;
-              &:hover {
-                font-weight: bold;
-                background-color: color.adjust($color, $lightness: 4%);
-                outline: 3px solid black;
-              }
-            }
-          }
-
-          .link {
+          li {
             display: flex;
-            width: 100%;
-            justify-content: flex-start;
+            flex-grow: 1;
             align-items: center;
-            text-decoration: none;
-            padding: 0.75em;
-            margin: 0;
+            padding: 0.5em 1em;
 
-            @each $name, $color in $fontColours {
-              &[data-name="#{$name}"] {
-                color: $color;
-              }
-            }
-
-            .icon {
+            .imageWrapper {
               display: flex;
-              height: 2em;
-              width: 2em;
-              margin-right: 0.4em;
+              margin-right: 0.5em;
 
-              @each $name, $color in $fontColours {
-                &[data-name="#{$name}"] {
-                  color: $color;
-                }
+              .image {
+                border-radius: 6px;
               }
             }
           }
@@ -93,7 +50,8 @@
     }
   }
 
-  .imageWrapper {
+  .banner {
+    display: flex;
     flex-grow: 1;
     position: relative;
   }
