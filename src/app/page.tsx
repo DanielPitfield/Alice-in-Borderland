@@ -1,7 +1,7 @@
 import styles from "../styles/index.module.scss";
 
 import Image, { StaticImageData } from "next/image";
-import BannerImage from "../../public/Images/Banner.jpg";
+import BannerImage from "../../public/Images/Banner.png";
 import Link from "next/link";
 import Card from "../components/Card";
 import { People } from "../data/People/AllPeople";
