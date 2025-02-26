@@ -42,8 +42,15 @@
       }
 
       .cards {
-        margin: 1em 0;
-        padding: 1em 0.5em;
+        // Add some extra margin due to natural padding of card (svg element)
+        margin: 0.75em;
+        margin-right: 0;
+
+        // Add some padding but don't grow into previous column
+        padding: 1em;
+        padding-left: 0;
+
+        // Emphasise that this card item is slightly different to the other list items (people)
         border: 2px solid #333;
         border-radius: 6px;
       }
