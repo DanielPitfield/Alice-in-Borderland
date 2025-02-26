@@ -9,27 +9,30 @@ import Link from "next/link";
 interface SuiteProps {
   suite: CardSuite;
   size: Size;
+  hasLink: boolean;
 }
 
 const Suite = (props: SuiteProps) => {
   const Icon: IconType | undefined = CardSuiteMappings.find((x) => x.suite === props.suite)?.icon;
 
-  // If the card image couldn't be found, just show the name of the card
-  if (!Icon) {
-    return (
-      <Link href={`/suites/${props.suite}`}>
+  const suiteContent = ((): React.ReactNode => {
+    // If the card image couldn't be found, just show the name of the card
+    if (!Icon) {
+      return (
         <div className={styles.text} data-size={props.size}>
           {props.suite}
         </div>
-      </Link>
-    );
+      );
+    }
+
+    return <Icon className={styles.icon} title={props.suite} data-size={props.size} />;
+  })();
+
+  if (props.hasLink) {
+    return <Link href={`/suites/${props.suite}`}>{suiteContent}</Link>;
   }
 
-  return (
-    <Link href={`/suites/${props.suite}`}>
-      <Icon className={styles.icon} title={props.suite} data-size={props.size} />
-    </Link>
-  );
+  return suiteContent;
 };
 
 export default Suite;

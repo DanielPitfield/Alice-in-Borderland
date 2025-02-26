@@ -9,7 +9,7 @@ export type PersonData = {
   gender: "Male" | "Female";
   occupation: string[];
   borderlandCitizenship: "Player" | "Dealer" | "Citizen";
-  gameSpeciality: CardSuite[];
+  gameSuiteSpecialities: CardSuite[];
   gamesPlayed: CardName[];
 };
 

@@ -6,14 +6,14 @@ import PersonCardSpeciality from "./PersonCardSpeciality";
 interface PersonHeaderProps {
   name: PersonData["name"];
   japaneseName: PersonData["japaneseName"];
-  gameSpeciality: PersonData["gameSpeciality"];
+  gameSuiteSpecialities: PersonData["gameSuiteSpecialities"];
 }
 
 const PersonHeader = (props: PersonHeaderProps) => {
   return (
     <div className={styles.titleWrapper}>
       <h1 className={styles.title}>{`${props.name} (${props.japaneseName})`}</h1>
-      <PersonCardSpeciality gameSpeciality={props.gameSpeciality} />
+      <PersonCardSpeciality gameSuiteSpecialities={props.gameSuiteSpecialities} />
     </div>
   );
 };
