@@ -5,6 +5,7 @@ import BannerImage from "../../public/Images/Banner.jpg";
 import Link from "next/link";
 import { People } from "../data/People/AllPeople";
 import { PersonImageMappings } from "../data/People/PersonImageMappings";
+import Card from "../components/Card";
 
 export default async function Page() {
   return (
@@ -33,6 +34,13 @@ export default async function Page() {
               </Link>
             );
           })}
+
+          <Link href="/cards">
+            <li className={styles.cards}>
+              <Card card="Joker" size="small" hasLink={false} />
+              Cards
+            </li>
+          </Link>
         </ul>
       </aside>
 
