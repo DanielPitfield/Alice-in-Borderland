@@ -24,7 +24,7 @@ export function Person(props: PersonProps) {
         <PersonHeader
           name={props.person.name}
           japaneseName={props.person.japaneseName}
-          gameSpeciality={props.person.gameSpeciality}
+          gameSuiteSpecialities={props.person.gameSuiteSpecialities}
         />
 
         <PersonFacts

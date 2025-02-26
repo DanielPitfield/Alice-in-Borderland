@@ -29,7 +29,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Licensed Psychologist", "School Counselor"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Hearts"],
+    gameSuiteSpecialities: ["Hearts"],
     gamesPlayed: [
       "3 of Clubs",
       "5 of Spades",
@@ -48,7 +48,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["Professional Climber", "Sports Trainer"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Spades"],
+    gameSuiteSpecialities: ["Spades"],
     gamesPlayed: [
       "4 of Spades",
       "5 of Spades",
@@ -67,7 +67,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["Apparels clerk"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Clubs", "Spades"],
+    gameSuiteSpecialities: ["Clubs", "Spades"],
     gamesPlayed: ["10 of Hearts", "Jack of Spades", "King of Spades", "King of Clubs"],
   },
   {
@@ -77,7 +77,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Medical student"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Diamonds"],
+    gameSuiteSpecialities: ["Diamonds"],
     gamesPlayed: [
       "5 of Spades",
       "6 of Diamonds",
@@ -94,7 +94,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Special Defense Force"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Spades"],
+    gameSuiteSpecialities: ["Spades"],
     gamesPlayed: ["6 of Spades", "10 of Hearts", "King of Spades"],
   },
   {
@@ -104,7 +104,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Game engineer"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Diamonds"],
+    gameSuiteSpecialities: ["Diamonds"],
     gamesPlayed: ["6 of Spades", "10 of Hearts", "King of Clubs", "King of Spades"],
   },
   {
@@ -114,7 +114,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["Neuroscientist and psychiatrist"],
     borderlandCitizenship: "Citizen",
-    gameSpeciality: ["Hearts"],
+    gameSuiteSpecialities: ["Hearts"],
     gamesPlayed: ["Queen of Hearts"],
   },
   {
@@ -124,7 +124,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["Office clerk"],
     borderlandCitizenship: "Player",
-    gameSpeciality: [],
+    gameSuiteSpecialities: [],
     gamesPlayed: ["2 of Hearts", "3 of Clubs", "7 of Hearts"],
   },
   {
@@ -134,7 +134,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Bartender"],
     borderlandCitizenship: "Player",
-    gameSpeciality: [],
+    gameSuiteSpecialities: [],
     gamesPlayed: ["3 of Clubs", "5 of Spades", "7 of Hearts"],
   },
   {
@@ -144,7 +144,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["High school student"],
     borderlandCitizenship: "Player",
-    gameSpeciality: [],
+    gameSuiteSpecialities: [],
     gamesPlayed: ["3 of Clubs", "7 of Hearts"],
   },
   {
@@ -154,7 +154,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Hat merchant"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Spades"],
+    gameSuiteSpecialities: ["Spades"],
     gamesPlayed: [],
   },
   {
@@ -164,7 +164,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["High school student"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Spades"],
+    gameSuiteSpecialities: ["Spades"],
     gamesPlayed: ["7 of Spades", "King of Spades"],
   },
   {
@@ -174,7 +174,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["High school student"],
     borderlandCitizenship: "Dealer",
-    gameSpeciality: ["Clubs"],
+    gameSuiteSpecialities: ["Clubs"],
     gamesPlayed: ["10 of Hearts"],
   },
   {
@@ -184,7 +184,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["High school student"],
     borderlandCitizenship: "Dealer",
-    gameSpeciality: ["Clubs"],
+    gameSuiteSpecialities: ["Clubs"],
     gamesPlayed: ["10 of Hearts"],
   },
   {
@@ -194,7 +194,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Freelance worker"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Clubs"],
+    gameSuiteSpecialities: ["Clubs"],
     gamesPlayed: ["10 of Hearts", "King of Clubs"],
   },
   {
@@ -204,7 +204,7 @@ export const People: PersonData[] = [
     gender: "Female",
     occupation: ["Metropolitan Police Forensic Scientist"],
     borderlandCitizenship: "Player",
-    gameSpeciality: ["Diamonds"],
+    gameSuiteSpecialities: ["Diamonds"],
     gamesPlayed: ["4 of Diamonds", "10 of Hearts", "Queen of Diamonds", "King of Spades"],
   },
   {
@@ -214,7 +214,7 @@ export const People: PersonData[] = [
     gender: "Male",
     occupation: ["Musician"],
     borderlandCitizenship: "Citizen",
-    gameSpeciality: ["Clubs"],
+    gameSuiteSpecialities: ["Clubs"],
     gamesPlayed: ["3 of Spades", "King of Clubs", "King of Hearts"],
   },
 ];

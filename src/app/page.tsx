@@ -1,28 +1,52 @@
 import styles from "../styles/index.module.scss";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import BannerImage from "../../public/Images/Banner.jpg";
-import SocialMediaButton from "../components/SocialMediaButton";
-import { SocialMediaNames } from "../data/SocialMedia";
+import Link from "next/link";
+import Card from "../components/Card";
+import { People } from "../data/People/AllPeople";
+import { PersonImageMappings } from "../data/People/PersonImageMappings";
 
 export default async function Page() {
   return (
-    <section className={styles.container}>
-      <aside className={styles.navigation}>
-        <div className={styles.wrapper}>
-          <p className={styles.description}>All the trivia from the hit Netflix adaptation Alice in Borderland!</p>
+    <div className={styles.container}>
+      <aside>
+        <ul>
+          {People.map((person) => {
+            const image: StaticImageData | undefined = PersonImageMappings.find((x) => x.name === person.name)?.image;
 
-          <ul className={styles.list}>
-            {SocialMediaNames.map((name) => (
-              <SocialMediaButton key={name} name={name} />
-            ))}
-          </ul>
-        </div>
+            return (
+              <Link key={person.id} href={`/people/${person.name}`}>
+                <li>
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      className={styles.image}
+                      src={image ?? ""}
+                      alt={person.name}
+                      priority
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+
+                  {person.name}
+                </li>
+              </Link>
+            );
+          })}
+
+          <Link href="/cards">
+            <li className={styles.cards}>
+              <Card card="Joker" size="small" hasLink={false} />
+              Cards
+            </li>
+          </Link>
+        </ul>
       </aside>
 
-      <div className={styles.imageWrapper}>
+      <div className={styles.banner}>
         <Image src={BannerImage} alt="Banner" priority fill />
       </div>
-    </section>
+    </div>
   );
 }

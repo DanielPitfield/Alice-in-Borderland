@@ -1,99 +1,56 @@
 @use "sass:color";
-@use "sass:map";
 
 .container {
   display: flex;
-  min-height: calc(100vh - 69px);
+  height: calc(100vh - 69px);
 
-  .navigation {
+  aside {
     display: flex;
-    flex-basis: 25.5vw;
+    flex-basis: 23.5vw;
+    padding: 1em;
     background-color: #222;
 
-    .wrapper {
+    ul {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 3em 2em;
-      color: white;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-      .description {
-        margin-bottom: 0;
-        font-weight: normal;
-      }
-
-      .list {
+      li {
         display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 0;
-        margin: 1em 0;
+        flex-grow: 1;
+        align-items: center;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        color: #a5a5a5;
 
-        $backgroundColours: (
-          "Netflix": black,
-          "IMDb": #f6c700,
-          "Reddit": #fe4502,
-        );
+        &:hover {
+          cursor: pointer;
+          background-color: color.adjust(#222, $lightness: -10%);
+        }
 
-        $fontColours: (
-          "Netflix": #e50914,
-          "IMDb": black,
-          "Reddit": white,
-        );
-
-        .item {
+        .imageWrapper {
           display: flex;
-          justify-content: center;
-          margin: 0.75em 0;
-          border-radius: 8px;
+          margin-right: 0.5em;
 
-          @each $name, $color in $backgroundColours {
-            &[data-name="#{$name}"] {
-              background-color: $color;
-              transition: background-color 0.1s ease;
-              box-shadow: #0000004d 0px 3px 8px;
-              &:hover {
-                font-weight: bold;
-                background-color: color.adjust($color, $lightness: 4%);
-                outline: 3px solid black;
-              }
-            }
-          }
-
-          .link {
-            display: flex;
-            width: 100%;
-            justify-content: flex-start;
-            align-items: center;
-            text-decoration: none;
-            padding: 0.75em;
-            margin: 0;
-
-            @each $name, $color in $fontColours {
-              &[data-name="#{$name}"] {
-                color: $color;
-              }
-            }
-
-            .icon {
-              display: flex;
-              height: 2em;
-              width: 2em;
-              margin-right: 0.4em;
-
-              @each $name, $color in $fontColours {
-                &[data-name="#{$name}"] {
-                  color: $color;
-                }
-              }
-            }
+          .image {
+            border-radius: 6px;
           }
         }
+      }
+
+      .cards {
+        // Add some padding to emphasis this is different to the other list items (people), but don't grow into previous column
+        padding: 2em 0;
+        padding-left: 0.3em;
       }
     }
   }
 
-  .imageWrapper {
+  .banner {
+    display: flex;
     flex-grow: 1;
     position: relative;
   }
