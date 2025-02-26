@@ -15,7 +15,9 @@ export default async function Page() {
           <section className={styles.panel}>
             <ul>
               {CardSuites.map((suite) => (
-                <li key={suite}>{suite}</li>
+                <Link key={suite} href={`/suites/${suite}`}>
+                  <li key={suite}>{suite}</li>
+                </Link>
               ))}
             </ul>
           </section>
