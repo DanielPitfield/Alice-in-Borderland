@@ -15,7 +15,8 @@ interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  const IconPath: IconType | undefined = CardMappings.find((x) => x.card === props.card)?.icon;
+  const Icon: IconType | undefined = CardMappings.find((x) => x.card === props.card)?.icon;
+
   const isLinkShown: boolean =
     props.hasLink &&
     Games.some(
@@ -25,9 +26,9 @@ const Card = (props: CardProps) => {
         game.name?.toLowerCase() === props.card.toLowerCase()
     );
 
-  function renderContent(): React.ReactNode {
+  const cardContent = ((): React.ReactNode => {
     // If the card image couldn't be found, just show the name of the card
-    if (!IconPath) {
+    if (!Icon) {
       return (
         <div
           className={styles.text}
@@ -41,7 +42,7 @@ const Card = (props: CardProps) => {
     }
 
     return (
-      <IconPath
+      <Icon
         className={styles.icon}
         title={props.card}
         data-is-face-card={["Jack", "Queen", "King"].some((x) => props.card.includes(x))}
@@ -49,10 +50,14 @@ const Card = (props: CardProps) => {
         data-disabled={!isLinkShown}
       />
     );
-  }
+  })();
 
   // Add a link if there is data for the game/card
-  return isLinkShown ? <Link href={`/games/${props.card}`}>{renderContent()}</Link> : <>{renderContent()}</>;
+  if (isLinkShown) {
+    return <Link href={`/games/${props.card}`}>{cardContent}</Link>;
+  }
+
+  return cardContent;
 };
 
 export default Card;
