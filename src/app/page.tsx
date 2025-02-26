@@ -2,7 +2,6 @@ import styles from "../styles/index.module.scss";
 
 import Image, { StaticImageData } from "next/image";
 import BannerImage from "../../public/Images/Banner.jpg";
-import { CardSuites } from "../data/Cards/AllCards";
 import Link from "next/link";
 import { People } from "../data/People/AllPeople";
 import { PersonImageMappings } from "../data/People/PersonImageMappings";
@@ -12,16 +11,6 @@ export default async function Page() {
     <section className={styles.container}>
       <aside className={styles.navigation}>
         <div className={styles.wrapper}>
-          <section className={styles.panel}>
-            <ul>
-              {CardSuites.map((suite) => (
-                <Link key={suite} href={`/suites/${suite}`}>
-                  <li key={suite}>{suite}</li>
-                </Link>
-              ))}
-            </ul>
-          </section>
-
           <section className={styles.panel}>
             <ul>
               {People.map((person) => {
