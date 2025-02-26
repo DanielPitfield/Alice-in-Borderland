@@ -1,5 +1,4 @@
 @use "sass:color";
-@use "sass:map";
 
 .container {
   display: flex;
@@ -24,6 +23,12 @@
         flex-grow: 1;
         align-items: center;
         padding: 0.5em 1em;
+        border-radius: 4px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: color.adjust(#222, $lightness: -10%);
+        }
 
         .imageWrapper {
           display: flex;
