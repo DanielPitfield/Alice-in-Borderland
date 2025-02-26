@@ -3,14 +3,14 @@ import styles from "../styles/index.module.scss";
 import Image, { StaticImageData } from "next/image";
 import BannerImage from "../../public/Images/Banner.jpg";
 import Link from "next/link";
+import Card from "../components/Card";
 import { People } from "../data/People/AllPeople";
 import { PersonImageMappings } from "../data/People/PersonImageMappings";
-import Card from "../components/Card";
 
 export default async function Page() {
   return (
     <div className={styles.container}>
-      <aside className={styles.navigation}>
+      <aside>
         <ul>
           {People.map((person) => {
             const image: StaticImageData | undefined = PersonImageMappings.find((x) => x.name === person.name)?.image;
