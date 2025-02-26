@@ -8,43 +8,37 @@ import { PersonImageMappings } from "../data/People/PersonImageMappings";
 
 export default async function Page() {
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <aside className={styles.navigation}>
-        <div className={styles.wrapper}>
-          <section className={styles.panel}>
-            <ul>
-              {People.map((person) => {
-                const image: StaticImageData | undefined = PersonImageMappings.find(
-                  (x) => x.name === person.name
-                )?.image;
+        <ul>
+          {People.map((person) => {
+            const image: StaticImageData | undefined = PersonImageMappings.find((x) => x.name === person.name)?.image;
 
-                return (
-                  <Link key={person.id} href={`/people/${person.name}`}>
-                    <li>
-                      <div className={styles.imageWrapper}>
-                        <Image
-                          className={styles.image}
-                          src={image ?? ""}
-                          alt={person.name}
-                          priority
-                          width={60}
-                          height={60}
-                        />
-                      </div>
+            return (
+              <Link key={person.id} href={`/people/${person.name}`}>
+                <li>
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      className={styles.image}
+                      src={image ?? ""}
+                      alt={person.name}
+                      priority
+                      width={60}
+                      height={60}
+                    />
+                  </div>
 
-                      {person.name}
-                    </li>
-                  </Link>
-                );
-              })}
-            </ul>
-          </section>
-        </div>
+                  {person.name}
+                </li>
+              </Link>
+            );
+          })}
+        </ul>
       </aside>
 
       <div className={styles.banner}>
         <Image src={BannerImage} alt="Banner" priority fill />
       </div>
-    </section>
+    </div>
   );
 }
