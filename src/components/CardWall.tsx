@@ -12,11 +12,17 @@ const CardWall = () => {
   );
 
   return (
-    <div className={styles.cardWrapper}>
-      {allCards.map((card) => (
-        <Card key={card} card={card} size={"medium"} hasLink />
-      ))}
-    </div>
+    <>
+      <div className={styles.cardWrapper}>
+        {allCards.map((card) => (
+          <Card key={card} card={card} size={"medium"} hasLink />
+        ))}
+      </div>
+
+      <div style={{ position: "absolute", right: 0, bottom: 0 }}>
+        <Card card="Joker" size="small" hasLink />
+      </div>
+    </>
   );
 };
 
