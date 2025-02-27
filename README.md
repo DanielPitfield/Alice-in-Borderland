@@ -6,7 +6,7 @@ Website for everything Alice in Borderland including profile pages for all the m
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-![Alice in Borderland Dashboard](https://pitsy.dev/Images/Projects/aliceInBorderlandDashboard.png)
+![Alice in Borderland Dashboard](https://pitsy.dev/Images/Projects/aliceInBorderland.png)
 
 ## Acknowledgments
 [Alice in Borderland Wiki](https://aliceinborderland.fandom.com/wiki/Alice_in_Borderland_Wiki)
