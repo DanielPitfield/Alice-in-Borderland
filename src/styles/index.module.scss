@@ -21,31 +21,37 @@
 
       li {
         display: flex;
-        flex-grow: 1;
-        align-items: center;
-        padding: 0.5em 1em;
         border-radius: 4px;
-        color: #e7e7e7;
 
         &:hover {
           cursor: pointer;
           background-color: color.adjust(#222, $lightness: -10%);
         }
 
-        .imageWrapper {
+        a {
           display: flex;
-          margin-right: 0.5em;
+          flex-grow: 1;
+          align-items: center;
+          padding: 0.5em 1em;
+          color: #e7e7e7;
 
-          .image {
-            border-radius: 6px;
+          .imageWrapper {
+            display: flex;
+            margin-right: 0.5em;
+
+            .image {
+              border-radius: 6px;
+            }
           }
         }
       }
 
       .cards {
-        // Add some padding to emphasis this is different to the other list items (people), but don't grow into previous column
-        padding: 2em 0;
-        padding-left: 0.3em;
+        a {
+          // Add some padding to emphasis this is different to the other list items (people), but don't grow into previous column
+          padding: 2em 0;
+          padding-left: 0.3em;
+        }
       }
     }
   }

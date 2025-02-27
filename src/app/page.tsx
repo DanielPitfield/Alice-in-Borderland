@@ -16,8 +16,8 @@ export default async function Page() {
             const image: StaticImageData | undefined = PersonImageMappings.find((x) => x.name === person.name)?.image;
 
             return (
-              <Link key={person.id} href={`/people/${person.name}`}>
-                <li>
+              <li key={person.id}>
+                <Link href={`/people/${person.name}`}>
                   <div className={styles.imageWrapper}>
                     <Image
                       className={styles.image}
@@ -30,17 +30,17 @@ export default async function Page() {
                   </div>
 
                   {person.name}
-                </li>
-              </Link>
+                </Link>
+              </li>
             );
           })}
 
-          <Link href="/cards">
-            <li className={styles.cards}>
+          <li className={styles.cards}>
+            <Link href="/cards">
               <Card card="Joker" size="small" hasLink={false} />
               Cards
-            </li>
-          </Link>
+            </Link>
+          </li>
         </ul>
       </aside>
 
