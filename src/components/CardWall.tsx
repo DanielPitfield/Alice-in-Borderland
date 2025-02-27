@@ -7,32 +7,16 @@ import { ClubsCardMappings } from "../data/Cards/Clubs";
 import { HeartsCardMappings } from "../data/Cards/Hearts";
 
 const CardWall = () => {
+  const allCards = SpadesCardMappings.concat(DiamondsCardMappings, ClubsCardMappings, HeartsCardMappings).map(
+    (x) => x.card
+  );
+
   return (
-    <>
-      <div className={styles.cardWrapper}>
-        {SpadesCardMappings.map((x) => x.card).map((card) => (
-          <Card key={card} card={card} size={"medium"} hasLink />
-        ))}
-      </div>
-
-      <div className={styles.cardWrapper}>
-        {DiamondsCardMappings.map((x) => x.card).map((card) => (
-          <Card key={card} card={card} size={"medium"} hasLink />
-        ))}
-      </div>
-
-      <div className={styles.cardWrapper}>
-        {ClubsCardMappings.map((x) => x.card).map((card) => (
-          <Card key={card} card={card} size={"medium"} hasLink />
-        ))}
-      </div>
-
-      <div className={styles.cardWrapper}>
-        {HeartsCardMappings.map((x) => x.card).map((card) => (
-          <Card key={card} card={card} size={"medium"} hasLink />
-        ))}
-      </div>
-    </>
+    <div className={styles.cardWrapper}>
+      {allCards.map((card) => (
+        <Card key={card} card={card} size={"medium"} hasLink />
+      ))}
+    </div>
   );
 };
 
